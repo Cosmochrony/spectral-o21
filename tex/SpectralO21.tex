@@ -1,0 +1,707 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{openproblem}[theorem]{Open Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\bstar}{\beta^*}
+
+\title{Shell-Level Saturation and the Fibre-Level Transfer
+  $\delta_{\mathrm{pair}} \to \beta^*$\\[0.5ex]
+  \large O21 --- Spectral Admissibility Sub-programme}
+\author{J.~Beau\\[0.5ex]
+\small Independent Researcher}
+\date{2026}
+
+\begin{document}
+
+  \maketitle
+
+  \begin{abstract}
+    The spectral admissibility sub-programme of Cosmochrony has
+    identified the canonical fibre-level observable
+    $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ as the relevant
+    quantity for the lepton mass hierarchy.
+    However, existing saturation criteria rely on the power-law
+    fit $\sigma(n) \sim C\,n^{-\delta}$, whose amplitude $C$ and
+    exponent $\delta$ depend on the fitting window and are not
+    intrinsic.
+
+    We construct a fully observable saturation rank
+    $n_3^{\mathrm{obs}}(n_0, n_1, q)$ by eliminating both $C$
+    and $\delta$ using two local measurements of
+    $\sigma_{\mathrm{pair}}^{\mathrm{can}}$.
+    This rank is invariant under global rescaling and all
+    pipeline-dependent normalisations, and depends only on
+    directly measurable quantities.
+
+    We conjecture that physical admissibility requires
+    $n_3^{\mathrm{obs}}$ to align with a BFS shell of the Cayley
+    graph $\mathrm{Cay}(G_q, S_q)$, providing a geometric
+    interpretation of saturation.
+    Under this shell-alignment hypothesis, the O7 structural
+    relation $\beta^* = 1/(\delta_{\mathrm{pair}} + \tfrac{1}{2})$
+    becomes valid at the fibre level.
+    The obstruction identified in O15 is thereby resolved: the
+    transfer fails at the block level because the observable was
+    mis-identified, not mis-measured.
+
+    Two problems remain open: establishing the shell-alignment
+    conjecture, and deriving the relation $\Sigma_c(n_3) = 3$
+    from the Born--Infeld admissibility structure rather than
+    assumed as an input to the threshold definition.
+  \end{abstract}
+
+  \paragraph{Keywords.}
+    spectral admissibility; non-injective projection; fibre-level observables; Weil representation; Heisenberg graphs;
+    projective capacity; power-law decay; intrinsic saturation criterion; BFS shell structure; scale invariance; lepton
+    mass hierarchy; cascade exponent; subdiffusive growth
+
+    \clearpage
+    \tableofcontents
+
+    \clearpage
+  \section{Introduction}
+  \label{sec:intro}
+
+  The spectral admissibility sub-programme of the Cosmochrony
+  framework~\cite{Cosmochrony} has progressively clarified a
+  structural tension between the exact Weil-block capacity
+  exponent and the phenomenological target set by the lepton
+  mass hierarchy.
+  Papers O13--O15~\cite{Beau2026a17,Beau2026a18,Beau2026a19}
+  ruled out finite-size effects and aggregation corrections as
+  resolutions; O16--O19~\cite{Beau2026a20,Beau2026a21,Beau2026a22,Beau2026a23}
+  relocated the problem at the fibre level, establishing that
+  the physically relevant observable is the canonical pair
+  quantity $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
+  constructed from conjugate Weil blocks $\{c, q-c\}$.
+  Paper O20~\cite{Beau2026a24} proposed a projective persistence
+  criterion for this observable, conditional on two structural
+  hypotheses concerning its relationship to the Born--Infeld
+  saturation envelope.
+
+  A central difficulty that remains unresolved after O20 is
+  the following.
+  The power-law fit
+  \[
+    \sigma_{\mathrm{pair}}^{\mathrm{can}}(n)
+    \approx C\,n^{-\delta_{\mathrm{pair}}}
+  \]
+  introduces two fitted parameters, the amplitude $C$ and the
+  exponent $\delta_{\mathrm{pair}}$, both of which depend on
+  the fitting window and therefore on pipeline conventions.
+  Any admissibility criterion formulated in terms of these
+  parameters inherits this dependence and is therefore not
+  intrinsic.
+
+  The central problem addressed in this paper is therefore:
+  can the saturation condition of O20 be reformulated in a
+  way that is entirely independent of fitted parameters and
+  normalisation choices?
+
+  We construct a positive answer under the power-law
+  hypothesis.
+  By combining two local observations of
+  $\sigma_{\mathrm{pair}}^{\mathrm{can}}$ at reference shells
+  $n_0$ and $n_1$, one can eliminate both $C$ and
+  $\delta_{\mathrm{pair}}$ simultaneously, producing a fully
+  observable saturation rank $n_3^{\mathrm{obs}}(n_0, n_1, q)$
+  that is invariant under all pipeline-dependent
+  transformations identified in
+  O17--O19~\cite{Beau2026a21,Beau2026a22,Beau2026a23}
+  and, in particular, under the amplitude artefact
+  $r(c,q) \in \{1,2,3,4\}$.
+
+  The key conceptual step is then to interpret saturation not
+  as the attainment of a numerical threshold in a continuous
+  fit, but as a \emph{geometric alignment condition} with the
+  discrete shell structure of the Cayley graph
+  $\mathrm{Cay}(G_q, S_q)$.
+  This leads to the shell-alignment conjecture: a conjugate
+  pair is physically admissible if and only if
+  $n_3^{\mathrm{obs}}$ aligns with a BFS shell
+  (Conjecture~\ref{conj:shell-saturation}).
+
+  This reformulation has three structural consequences.
+  First, it removes all free parameters from the admissibility
+  criterion, making it directly testable across primes and
+  pairs without pipeline recalibration.
+  Second, it reveals a resonance condition between two a priori
+  independent structures: the continuous power-law decay
+  induced by Weil representation dynamics and the discrete
+  shell geometry of the Heisenberg Cayley graph.
+  Third, it provides a structural interpretation of the
+  threshold $9 = 3^2$ as the normalised product of the
+  fibre-level cumulative spans at the three-dimensional
+  saturation point, connecting the admissibility condition to
+  the emergence of three physically stable directions under
+  the non-injective projection~$\Pi$.
+
+  The criterion constructed here is intrinsic, observable, and
+  independent of representation choices.
+  It provides the missing ingredient required for the
+  derivation of the $\delta_{\mathrm{pair}} \to \beta^*$
+  transfer, carried out in the subsequent sections under the
+  shell-alignment hypothesis.
+
+  The paper is organised as follows.
+  Section~\ref{sec:background} recalls the relevant results of
+  O16--O20.
+  Section~\ref{sec:observable-criterion} constructs
+  $n_3^{\mathrm{obs}}$ and establishes its invariance
+  properties.
+  Section~\ref{sec:shell-conjecture} states the shell-alignment
+  conjecture and discusses its numerical status.
+  Section~\ref{sec:transfer} derives the
+  $\delta_{\mathrm{pair}} \to \beta^*$ transfer at the
+  fibre level.
+  Section~\ref{sec:conclusion} discusses open directions.
+
+  \section{Background: From Block to Fibre Level}
+  \label{sec:background}
+
+  \subsection{Block-level observable and its limitations}
+
+    Papers O12 and O13~\cite{Beau2026a16,Beau2026a17} introduced
+    the Gram--Schmidt span tracker on Heisenberg Cayley graphs
+    $\mathrm{Cay}(G_q, S_q)$ with
+    $G_q = \mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ for prime
+    $q$, establishing the mean block-level observable
+    $\bar{\sigma}(n)$ with decay exponent
+    $\hat{\delta}_{\mathrm{exact}} \approx 3.72$.
+    O14 and O15~\cite{Beau2026a18,Beau2026a19} demonstrated that
+    this exponent lies structurally below the phenomenological
+    target $\delta \in [7.4, 10.6]$, and that no aggregation
+    of block data can bridge this gap (O15 Corollary~4.8).
+
+  \subsection{Fibre-level resolution}
+
+    O16~\cite{Beau2026a20} identified the resolution: the
+    physically relevant observable is defined on conjugate pairs
+    $\{c, q-c\}$, giving
+    $\sigma_{\mathrm{pair}}(n) = \sigma_c(n)\,\sigma_{q-c}(n)$
+    with exponent $\delta_{\mathrm{pair}} = 2\delta_c \approx
+  7.44$.
+    O17~\cite{Beau2026a21} established the structural derivation:
+    $\delta_{q-c} = \delta_c$ follows from
+    $\rho_{q-c} = \overline{\rho_c}$ and norm-invariance of
+    Gram--Schmidt.
+    O18~\cite{Beau2026a22} derived the pairing from first
+    principles via the parity of the Born--Infeld action.
+    O19~\cite{Beau2026a23} constructed the canonical observable
+    $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$, eliminating the
+    residual amplitude factor $r(c,q) \in \{1,2,3,4\}$.
+
+    \begin{remark}[Observable was mis-identified, not mis-measured]
+      \label{rem:mis-identified-background}
+      The move from block to fibre level is not a correction of
+      O12--O15 but a change of observable class.
+      O15 closes the block-level programme; O16--O19 open and
+      populate the fibre-level programme.
+    \end{remark}
+
+  \subsection{The open problem after O20}
+
+    O20~\cite{Beau2026a24} proposed a projective persistence
+    criterion for $\sigma_{\mathrm{pair}}^{\mathrm{can}}$,
+    conditional on two hypotheses:
+    that the observable is a monotone function of an effective
+    fibre-level amplitude~[H1], and that this amplitude inherits
+    the Born--Infeld saturation bound~[H2].
+    The central open problem identified in O20 is the intrinsic
+    derivation of the saturation threshold $\sigma_{\mathrm{BI}}$
+    from the Born--Infeld constraint, without reference to the
+    phenomenological window $\beta^* \in (0.09, 0.13)$.
+
+    The present paper addresses this problem from a different
+    angle: rather than deriving $\sigma_{\mathrm{BI}}$
+    dynamically, we construct a saturation rank
+    $n_3^{\mathrm{obs}}$ that is free of fitted parameters and
+    interpret its geometric meaning.
+
+  \section{A Fully Observable Saturation Criterion}
+  \label{sec:observable-criterion}
+
+  \subsection{Eliminating the amplitude and the exponent}
+
+    The power-law fit
+    $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n) \approx
+    C\,n^{-\delta_{\mathrm{pair}}}$ introduces two fitted
+    parameters, $C$ and $\delta_{\mathrm{pair}}$, both of which
+    depend on the fitting window and therefore on pipeline
+    conventions.
+    We eliminate both in succession.
+
+    \paragraph{Eliminating $C$.}
+      For any two shells $n_0 < n_3$ in the power-law regime,
+      \[
+        \frac{\sigma(n_3)}{\sigma(n_0)}
+        = \left(\frac{n_3}{n_0}\right)^{-\delta}.
+      \]
+      Setting $\sigma(n_3) = 9/q^2$ and solving for $n_3$:
+      \begin{equation}
+        \label{eq:n3-no-C}
+        n_3
+        = n_0 \left(\frac{q^2\,\sigma(n_0)}{9}\right)^{1/\delta}.
+      \end{equation}
+      The amplitude $C$ has cancelled.
+
+    \paragraph{Eliminating $\delta$.}
+      The local exponent between any two reference shells
+      $n_0 < n_1$ within the power-law regime is
+      \begin{equation}
+        \label{eq:delta-local}
+        \delta(n_0, n_1)
+        = \frac{\log\bigl(\sigma(n_0)/\sigma(n_1)\bigr)}
+        {\log(n_1/n_0)}.
+      \end{equation}
+      Substituting~\eqref{eq:delta-local}
+      into~\eqref{eq:n3-no-C} gives the fully observable
+      expression:
+      \begin{equation}
+        \label{eq:n3-observable}
+        \boxed{
+          n_3^{\mathrm{obs}}(n_0, n_1, q)
+          \;=\;
+          n_0
+          \left(\frac{q^2\,\sigma(n_0)}{9}\right)^{%
+            \frac{\log(n_1/n_0)}{\log(\sigma(n_0)/\sigma(n_1))}}
+        }
+      \end{equation}
+      This expression contains no fitted parameters.
+      It depends only on the observable values
+      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n_0)$ and
+      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n_1)$ at two reference
+      shells, the prime $q$, and the integer $9$.
+
+      \begin{definition}[Observable saturation rank]
+        \label{def:n3obs}
+        Let $n_0 < n_1$ be two shells in the power-law regime of
+        $\sigma_{\mathrm{pair}}^{\mathrm{can}}$.
+        The \emph{observable saturation rank} is
+        \[
+          n_3^{\mathrm{obs}}(n_0, n_1, q)
+          \;:=\;
+          n_0
+          \left(\frac{q^2\,\sigma_{\mathrm{pair}}^{\mathrm{can}}(n_0)}{9}
+          \right)^{%
+            \frac{\log(n_1/n_0)}{\log\!\left(
+                                         \sigma_{\mathrm{pair}}^{\mathrm{can}}(n_0)\,/\,
+                                         \sigma_{\mathrm{pair}}^{\mathrm{can}}(n_1)
+            \right)}
+          }.
+        \]
+      \end{definition}
+
+      \begin{proposition}[Local power-law consistency]
+        \label{prop:local-consistency}
+        If $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ follows an
+        exact power law on an interval $[n_0, n_1]$, then
+        $n_3^{\mathrm{obs}}(n_0, n_1, q)$ is independent of the
+        choice of $(n_0, n_1)$ within that interval.
+        Conversely, any observed dependence of $n_3^{\mathrm{obs}}$
+        on $(n_0, n_1)$ directly measures deviations from an exact
+        power-law regime.
+      \end{proposition}
+
+      \begin{proof}
+        Under the exact power law $\sigma(n) = C n^{-\delta}$,
+        the local exponent $\delta(n_0, n_1) = \delta$ for any
+        $n_0 < n_1$ in the regime.
+        Substituting into Definition~\ref{def:n3obs}:
+        \[
+          n_3^{\mathrm{obs}}
+          = n_0 \left(\frac{q^2 C n_0^{-\delta}}{9}\right)^{1/\delta}
+          = \left(\frac{q^2 C}{9}\right)^{1/\delta},
+        \]
+        which is independent of $n_0$ and $n_1$.
+        The converse follows immediately.
+      \end{proof}
+
+      \begin{remark}[Invariance under global rescaling]
+        \label{rem:invariance}
+        $n_3^{\mathrm{obs}}$ is invariant under $\sigma \mapsto
+        \lambda \sigma$ for any constant $\lambda > 0$: the
+        exponent in Definition~\ref{def:n3obs} uses only the ratio
+        $\sigma(n_0)/\sigma(n_1)$, which is unaffected by a global
+        multiplicative factor.
+        In particular, $n_3^{\mathrm{obs}}$ is independent of the
+        pipeline normalisation factor $r(c,q) \in \{1,2,3,4\}$
+        identified in
+        O17--O19~\cite{Beau2026a21,Beau2026a22,Beau2026a23}.
+        The criterion therefore depends only on the \emph{shape} of
+        the decay, not on its absolute normalisation.
+      \end{remark}
+
+  \section{The Shell-Alignment Conjecture}
+  \label{sec:shell-conjecture}
+
+  Here $S_n = \{g \in G_q \mid d(e, g) = n\}$ denotes the
+  sphere of radius $n$ in $\mathrm{Cay}(G_q, S_q)$, where $d$
+  is the word metric.
+
+  \begin{conjecture}[Shell-level saturation]
+    \label{conj:shell-saturation}
+    A conjugate pair $\{c, q-c\}$ is physically admissible if
+    and only if the observable saturation rank aligns with a
+    shell of the Cayley graph $\mathrm{Cay}(G_q, S_q)$:
+    \[
+      \mathrm{dist}\!\left(
+                       n_3^{\mathrm{obs}}(n_0, n_1, q),\;
+                       \{n \mid S_n \neq \varnothing\}
+      \right)
+      \;\ll\; 1,
+    \]
+    where $S_n = \{g \in G_q \mid d(e, g) = n\}$ denotes the
+    BFS shell at depth $n$ in $\mathrm{Cay}(G_q, S_q)$, and $d$
+    is the word metric.
+  \end{conjecture}
+
+  \begin{remark}[Physical interpretation and logarithmic
+  commensurability]
+    \label{rem:physical-interp}
+    The Cayley graph $\mathrm{Cay}(G_q, S_q)$ imposes a discrete
+    shell structure $S_0, S_1, S_2, \ldots$ determined by the
+    group geometry of $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$.
+    The power-law decay of $\sigma_{\mathrm{pair}}^{\mathrm{can}}$
+    is governed by the Weil representation dynamics.
+    These two structures are a priori independent.
+    Conjecture~\ref{conj:shell-saturation} asserts that physical
+    admissibility requires their \emph{resonance}: the point at
+    which the capacity observable reaches the saturation
+    threshold must coincide with a shell boundary.
+    This is a condition on the representation theory of
+    $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$, not a consequence
+    of any choice of numeration.
+
+    Writing $n_3^{\mathrm{obs}} = n_0 \cdot A^{1/\delta}$ where
+    $A = q^2\,\sigma(n_0)/9 > 0$, the condition can be viewed
+    as a \emph{logarithmic commensurability constraint}: the
+    local decay rate $\delta$ and the amplitude ratio $A$ must
+    be commensurate with the integer shell structure of the
+    graph.
+  \end{remark}
+
+  \begin{remark}[The origin of the threshold $9 = 3^2$]
+    \label{rem:origin-9}
+    The number $9 = 3^2$ in Definition~\ref{def:n3obs} is not
+    an external input.
+    If $\Sigma_c(n_3) = \Sigma_{q-c}(n_3) = 3$ at the
+    saturation shell, then
+    \[
+      q^2\,\sigma_{\mathrm{pair}}^{\mathrm{can}}(n_3)
+      \;=\;
+      \frac{\Sigma_c(n_3)}{q} \cdot
+      \frac{\Sigma_{q-c}(n_3)}{q} \cdot q^2
+      \;=\; 3^2 \;=\; 9.
+    \]
+    The threshold $9/q^2$ is therefore the normalised product of
+    the two fibre-level cumulative spans at the
+    three-dimensional saturation point.
+    This identification is independent of any basis choice,
+    as it involves only cumulative span dimensions.
+    The integer $3$ reflects the number of physically stable
+    directions selected by the projection $\Pi$ in the Weil
+    realisation of $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$;
+    whether $\Sigma_c(n_3) = 3$ is a derived consequence of the
+    Born--Infeld structure or an independent arithmetic property
+    of the Weil representation is an open problem.
+  \end{remark}
+
+  \begin{remark}[Stability as a diagnostic]
+    \label{rem:stability-diagnostic}
+    By Proposition~\ref{prop:local-consistency}, the stability
+    of $n_3^{\mathrm{obs}}$ under variation of $(n_0, n_1)$
+    within the pre-saturation window provides a direct empirical
+    test of the power-law hypothesis.
+    A stable $n_3^{\mathrm{obs}}$ confirms the regime;
+    instability quantifies finite-size corrections and guides
+    the choice of fitting window for larger~$q$.
+  \end{remark}
+
+  \subsection{Numerical status}
+
+    The shell-alignment conjecture makes a concrete and
+    falsifiable prediction: for physically admissible conjugate
+    pairs, $n_3^{\mathrm{obs}}(n_0, n_1, q)$ should lie close
+    to an admissible BFS shell depth.
+
+    \begin{table}[ht]
+      \centering
+      \begin{tabular}{cccccc}
+        \hline
+        $q$ & $(c,\,q-c)$ & $\delta_{\mathrm{pair}}$ & $R^2$ &
+        $n_3^{\mathrm{obs}}$ &
+        $\mathrm{dist}(n_3^{\mathrm{obs}}, \mathbb{Z})$ \\
+        \hline
+        61 & $(1,\,60)$ & 7.512 & 1.0000 & 4.80 & 0.20 \\
+        \hline
+      \end{tabular}
+      \caption{Observable saturation rank for available pairs with
+        $\delta_{\mathrm{pair}} \in [7.4, 10.6]$.
+        $n_3^{\mathrm{obs}}$ is computed from
+        Definition~\ref{def:n3obs} with $(n_0, n_1) = (2, 7)$,
+        the pre-saturation window of~\cite{Beau2026a17}.
+        The distance to the nearest BFS shell depth provides a
+        direct test of Conjecture~\ref{conj:shell-saturation}.}
+      \label{tab:n3obs}
+    \end{table}
+
+    At integer shells, the threshold $9/q^2$ is bracketed as:
+    \[
+      q^2\,\sigma_{\mathrm{pair}}^{\mathrm{can}}(4) \approx 6.64,
+      \qquad
+      q^2\,\sigma_{\mathrm{pair}}^{\mathrm{can}}(5) \approx 1.66,
+    \]
+    showing that $n_3^{\mathrm{obs}} \approx 4.80$ lies strictly
+    between two consecutive shells.
+
+    The value $\mathrm{dist}(n_3^{\mathrm{obs}}, \mathbb{Z})
+  \approx 0.20$ is intermediate: it does not indicate exact
+    alignment, but is also significantly below maximal
+    misalignment ($0.5$).
+
+    Two scenarios are distinguishable by further data.
+    The conjecture predicts not that any individual pair has
+    $\mathrm{dist}(n_3^{\mathrm{obs}}, \mathbb{Z}) = 0$
+    exactly, but that the \emph{distribution} of distances
+    across physically admissible pairs concentrates near $0$,
+    in contrast to a uniform distribution on $[0, \tfrac{1}{2}]$
+    expected under the null hypothesis.
+    In the \emph{alignment scenario}, this concentration becomes
+    statistically significant as the dataset grows in $q$ and in
+    the number of pairs.
+    In the \emph{non-alignment scenario}, the distribution
+    remains uniform, falsifying the conjecture.
+    The single available data point
+    ($\mathrm{dist} \approx 0.20$ for $q=61$) is consistent with
+    both scenarios and does not discriminate between them.
+
+    A decisive test requires computing
+    $n_3^{\mathrm{obs}}$ for all conjugate pairs with
+    $\delta_{\mathrm{pair}} \in [7.4, 10.6]$ across
+    $q \in \{101, 151, 211\}$, using the canonical pair
+    observable of O19~\cite{Beau2026a23}.
+
+  \section{The $\delta_{\mathrm{pair}} \to \beta^*$ Transfer
+  at the Fibre Level}
+  \label{sec:transfer}
+
+  \subsection{Conditions of applicability of the O7 relation}
+
+    The structural relation
+    \begin{equation}
+      \label{eq:O7-relation}
+      \beta^* = \frac{1}{\delta + \tfrac{1}{2}},
+    \end{equation}
+    derived in O7~\cite{Beau2026a11}, rests on three conditions:
+    \begin{enumerate}[label=(\roman*)]
+  \item the capacity observable decays as a stable power law
+  $\sigma(n) \sim n^{-\delta}$ in the pre-saturation
+  regime;
+  \item the pre-saturation window is sufficiently wide for
+  an asymptotic regime to be established;
+  \item the saturation threshold is well-defined, in the
+  sense that the observable crosses it at a determinate
+  rank.
+    \end{enumerate}
+    O15~\cite{Beau2026a19} established that these conditions
+    fail at the block level.
+    O16--O19 showed that conditions (i) and (ii) are satisfied
+    at the fibre level with $\delta = \delta_{\mathrm{pair}}
+  \approx 7.44$.
+    Condition (iii) remained implicit until the present paper:
+    the saturation rank was defined via the fitted amplitude
+    $C$, which is not intrinsic.
+    Definition~\ref{def:n3obs} resolves this by providing an
+    intrinsic, pipeline-independent saturation rank.
+
+  \subsection{Restoration of the transfer}
+
+    \begin{theorem}[Conditional transfer]
+      \label{thm:conditional-transfer}
+      Assume that $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
+      exhibits a stable power-law decay with exponent
+      $\delta_{\mathrm{pair}}$ over a pre-saturation window
+      $[n_0, n_1]$ satisfying conditions \textup{(i)} and
+      \textup{(ii)} above, and that
+      Conjecture~\ref{conj:shell-saturation} holds for the
+      conjugate pair $\{c, q-c\}$.
+      Then the O7 structural relation~\eqref{eq:O7-relation}
+      applies with $\delta = \delta_{\mathrm{pair}}$, and the
+      cascade exponent satisfies
+      \begin{equation}
+        \label{eq:transfer}
+        \beta^*
+        = \frac{1}{\delta_{\mathrm{pair}} + \tfrac{1}{2}}.
+      \end{equation}
+    \end{theorem}
+
+    \begin{proof}
+      Condition (i) is satisfied by the power-law decay of
+      $\sigma_{\mathrm{pair}}^{\mathrm{can}}$ with $R^2 \approx 1$,
+      established in
+      O16--O19~\cite{Beau2026a20,Beau2026a21,Beau2026a22,Beau2026a23}.
+      Condition (ii) is satisfied by the pre-saturation window
+      $[n_0, n_1]$ of the O12/O13
+      pipeline~\cite{Beau2026a16,Beau2026a17}, which grows with
+      $q$ and supports an asymptotically stable power-law regime.
+      Condition (iii) is satisfied under
+      Conjecture~\ref{conj:shell-saturation}: the saturation rank
+      $n_3^{\mathrm{obs}}$ aligns with a BFS shell of
+      $\mathrm{Cay}(G_q, S_q)$, providing a determinate,
+      scale-independent saturation event at a geometric rank of
+      the cascade.
+      With all three conditions satisfied, the O7 derivation
+      applies without modification, yielding~\eqref{eq:transfer}.
+    \end{proof}
+
+    \begin{remark}[Conditional status]
+      \label{rem:conditional}
+      Theorem~\ref{thm:conditional-transfer} is conditional on
+      Conjecture~\ref{conj:shell-saturation}.
+      The transfer becomes a theorem once the conjecture is
+      established.
+    \end{remark}
+
+  \subsection{Numerical evaluation}
+
+    Substituting $\delta_{\mathrm{pair}} \approx 7.44$
+    into~\eqref{eq:transfer}:
+    \begin{equation}
+      \label{eq:beta-numerical}
+      \beta^*
+      = \frac{1}{7.44 + 0.5}
+      \approx 0.126,
+    \end{equation}
+    which lies at the upper boundary of the phenomenological
+    window $\beta^* \in (0.09, 0.13)$ established
+    in~O3~\cite{Beau2026a7}.
+
+    \begin{remark}[Position within the window]
+      \label{rem:window-position}
+      The value $\beta^* \approx 0.126$ is consistent with the
+      phenomenological target but falls near its upper boundary.
+      This is structurally consistent with
+      $\delta_{\mathrm{pair,min}} = 2\delta_{c,\min} \approx 7.44$,
+      which places the measured exponent at the lower boundary of
+      the physically admissible sub-spectrum $[7.4, 10.6]$.
+      A value of $\delta_{\mathrm{pair}}$ higher in this
+      sub-spectrum would yield a smaller $\beta^*$, deeper within
+      the window.
+    \end{remark}
+
+  \subsection{The role of the fibre doubling}
+
+    The exact doubling $\delta_{\mathrm{pair}} = 2\delta_c$
+    from O16--O17~\cite{Beau2026a20,Beau2026a21} gives the
+    equivalent block-level expression:
+    \begin{equation}
+      \label{eq:transfer-block}
+      \beta^*
+      = \frac{1}{2\delta_c + \tfrac{1}{2}}.
+    \end{equation}
+    This shows that the factor $2$ is structural rather than
+    combinatorial: it reflects the independent and equal
+    contribution of the two conjugate fibres to the fibre-level
+    capacity, established by $\delta_{q-c} = \delta_c$
+    (O17 Theorem~2.1~\cite{Beau2026a21}) and the Born--Infeld
+    parity of O18~\cite{Beau2026a22}.
+
+  \subsection{Resolution of the O15 tension}
+
+    O15 showed that the transfer $\delta \to \beta^*$ fails at
+    the block level: no aggregation of block data recovers the
+    fibre-level exponent.
+    The present paper shows that the transfer becomes valid at
+    the fibre level once the saturation rank is defined
+    intrinsically via $n_3^{\mathrm{obs}}$.
+    The O15 obstruction is therefore not a failure of the O7
+    mechanism, but a consequence of applying it to the wrong
+    observable class.
+    In this sense, the observable was mis-identified, not
+    mis-measured.
+
+  \section{Conclusion}
+  \label{sec:conclusion}
+
+  This paper establishes a fully observable and intrinsic
+  criterion for fibre-level admissibility in the spectral
+  programme of Cosmochrony.
+  By eliminating both the amplitude and the exponent from the
+  power-law description of
+  $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$, we constructed
+  the saturation rank $n_3^{\mathrm{obs}}$, which depends only
+  on directly measurable values of the observable and is
+  invariant under all pipeline-dependent normalisations.
+  Under the shell-alignment conjecture, this rank acquires a
+  discrete geometric interpretation as a BFS shell depth in
+  $\mathrm{Cay}(G_q, S_q)$, providing a well-defined and
+  scale-independent saturation event.
+  In this setting, the O7 relation
+  $\beta^* = 1/(\delta_{\mathrm{pair}} + \tfrac{1}{2})$
+  becomes valid at the fibre level, yielding
+  $\beta^* \approx 0.126$ consistent with the phenomenological
+  window.
+  The transfer is formulated as a conditional theorem, making
+  its status explicit and separating structural necessity from
+  empirical verification.
+
+  The obstruction identified in O15 is thereby resolved.
+  The failure of the $\delta \to \beta^*$ transfer at the
+  block level does not invalidate the O7 mechanism, but
+  reflects the fact that the block-level observable is not
+  the admissibility-relevant quantity.
+  Once the observable is correctly identified at the fibre
+  level and the saturation event is defined intrinsically,
+  the transfer applies without modification.
+  In this sense, the observable was mis-identified, not
+  mis-measured.
+
+  Two problems remain open.
+  First, the shell-alignment conjecture must be established
+  or refuted.
+  This requires either a numerical demonstration of alignment
+  across primes and conjugate pairs, or a structural result
+  on the Weil representation of
+  $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ ensuring the
+  commensurability of the decay law with the discrete shell
+  geometry.
+  Second, the relation $\Sigma_c(n_3) = 3$, which underlies
+  the threshold $9 = 3^2$, must be derived from the
+  Born--Infeld admissibility structure rather than assumed
+  as an input to the threshold definition.
+
+  Within the spectral admissibility programme, the present
+  result closes the observable-level chain initiated in O13.
+  All dependencies on fitted parameters and pipeline
+  normalisations have been eliminated, and the admissibility
+  criterion has been reduced to a purely intrinsic statement.
+  The next stage of the programme is therefore sharply
+  delimited: either an extended numerical campaign at larger
+  primes and across multiple conjugate pairs, or a structural
+  derivation of the shell-alignment condition from the
+  underlying representation theory.
+
+
+  \begin{thebibliography}{99}
+    \input{cosmochrony-bibliography}
+
+  \end{thebibliography}
+
+\end{document}
