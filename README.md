@@ -31,14 +31,10 @@ This defines the scope of **O21**.
 The paper constructs an **intrinsic saturation criterion**.
 
 The key object is a **parameter-free observable crossing rank**
-\[
-n_{3}^{\mathrm{obs}}
-\]
+$n_{3}^{\mathrm{obs}}$
 
 defined directly from the canonical observable
-\[
-\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)
-\]
+$\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
 
 without any amplitude parameter.
 
@@ -57,9 +53,7 @@ This removes entirely:
 ### 1. Intrinsic crossing rank
 
 The observable defines a unique rank
-\[
-n_{3}^{\mathrm{obs}}
-\]
+$n_{3}^{\mathrm{obs}}$
 
 through an internal condition (alignment, curvature, or shell structure).
 
@@ -73,9 +67,7 @@ This rank is:
 
 In **O20**, the crossing condition was:
 
-\[
-n^* = \left(\frac{C}{\sigma_{\mathrm{BI}}}\right)^{1/\delta}
-\]
+$n^* = \left(\frac{C}{\sigma_{\mathrm{BI}}}\right)^{1/\delta}$
 
 In **O21**:
 
@@ -84,9 +76,7 @@ In **O21**:
 
 The crossing condition becomes:
 
-\[
-n_{3}^{\mathrm{obs}} = \mathcal{F}\big(\sigma_{\mathrm{pair}}^{\mathrm{can}}\big)
-\]
+$n_{3}^{\mathrm{obs}} = \mathcal{F}\big(\sigma_{\mathrm{pair}}^{\mathrm{can}}\big)$
 
 Thus, the persistence criterion becomes **parameter-free**.
 
@@ -95,9 +85,7 @@ Thus, the persistence criterion becomes **parameter-free**.
 The construction satisfies:
 
 - invariance under  
-  \[
-  \sigma(n) \mapsto \alpha\,\sigma(n)
-  \]
+  $\sigma(n) \mapsto \alpha\,\sigma(n)$
 
 - independence from pipeline normalisation
 - compatibility with the canonical structure of **O19**
@@ -118,9 +106,7 @@ This replaces the external threshold with an **internal geometric signal**.
 
 The exponent is no longer selected by a window condition, but by intrinsic consistency:
 
-\[
-\sigma_{\mathrm{pair}}^{\mathrm{can}}(n) \sim n^{-\delta_{\mathrm{pair}}}
-\]
+$\sigma_{\mathrm{pair}}^{\mathrm{can}}(n) \sim n^{-\delta_{\mathrm{pair}}}$
 
 must be compatible with the intrinsic crossing rank $n_{3}^{\mathrm{obs}}$.
 
@@ -130,9 +116,7 @@ This restores a **structural determination** of $\delta_{\mathrm{pair}}$.
 
 Under the structural assumption that the intrinsic crossing corresponds to the effective cascade scale:
 
-\[
-\beta^* = \frac{1}{\delta_{\mathrm{pair}} + \frac{1}{2}}
-\]
+$\beta^* = \frac{1}{\delta_{\mathrm{pair}} + \frac{1}{2}}$
 
 This resolves the obstruction identified in **O15**.
 
@@ -159,9 +143,7 @@ More precisely, the paper:
 - fibre structure of **O18**
 - power-law decay regime
 - measured exponent  
-  \[
-  \delta_{\mathrm{pair}} \approx 7.44
-  \]
+  $\delta_{\mathrm{pair}} \approx 7.44$
 
 ### New results
 
