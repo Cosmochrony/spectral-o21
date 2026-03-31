@@ -1,5 +1,3 @@
-# O21 — Intrinsic Saturation and the Canonical Observable
-
 This repository contains the source of the **O21 Cosmochrony paper**  
 [*Intrinsic Saturation and the Canonical Observable:  
 A Parameter-Free Selection Criterion for the Capacity Exponent*](out/SpectralO21.pdf).
