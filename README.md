@@ -12,21 +12,16 @@ the central structural limitation of **O20**:
 **O20** established that:
 
 - the physically relevant observable is the canonical pair-level quantity  
-  \[
-  \sigma_{\mathrm{pair}}^{\mathrm{can}}(n)
-  \]
-
+$\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
 - the admissible sub-spectrum is characterised by a threshold-crossing condition
 
 - the persistence criterion selects an interval  
-  \[
-  \delta_{\mathrm{pair}} \in [7.4, 10.6]
-  \]
+$\delta_{\mathrm{pair}} \in [7.4, 10.6]$
 
 However:
 
-- the threshold \(\sigma_{\mathrm{BI}}\) remained external
-- the crossing rank \(n^*\) depended on a fit parameter \(C\)
+- the threshold $\sigma_{\mathrm{BI}}$ remained external
+- the crossing rank $n^*$ depended on a fit parameter $C$
 - the criterion was therefore not intrinsic
 
 This defines the scope of **O21**.
@@ -54,8 +49,8 @@ without any amplitude parameter.
 
 This removes entirely:
 
-- the dependence on \(C\)
-- the need to postulate \(\sigma_{\mathrm{BI}}\)
+- the dependence on $C$
+- the need to postulate $\sigma_{\mathrm{BI}}$
 
 ## Main Structural Results
 
@@ -84,8 +79,8 @@ n^* = \left(\frac{C}{\sigma_{\mathrm{BI}}}\right)^{1/\delta}
 
 In **O21**:
 
-- \(C\) disappears completely
-- \(\sigma_{\mathrm{BI}}\) is no longer an input
+- $C$ disappears completely
+- $\sigma_{\mathrm{BI}}$ is no longer an input
 
 The crossing condition becomes:
 
@@ -127,9 +122,9 @@ The exponent is no longer selected by a window condition, but by intrinsic consi
 \sigma_{\mathrm{pair}}^{\mathrm{can}}(n) \sim n^{-\delta_{\mathrm{pair}}}
 \]
 
-must be compatible with the intrinsic crossing rank \(n_{3}^{\mathrm{obs}}\).
+must be compatible with the intrinsic crossing rank $n_{3}^{\mathrm{obs}}$.
 
-This restores a **structural determination** of \(\delta_{\mathrm{pair}}\).
+This restores a **structural determination** of $\delta_{\mathrm{pair}}$.
 
 ### 6. Conditional recovery of the cascade relation
 
@@ -154,7 +149,7 @@ More precisely, the paper:
 - proves its invariance properties
 - reformulates admissibility as a structural constraint
 - prepares the full derivation of the  
-  \(\delta_{\mathrm{pair}} \rightarrow \beta^*\) map
+  $\delta_{\mathrm{pair}} \rightarrow \beta^*$ map
 
 ## Epistemic Structure of the Paper
 
@@ -170,7 +165,7 @@ More precisely, the paper:
 
 ### New results
 
-- intrinsic definition of \(n_{3}^{\mathrm{obs}}\)
+- intrinsic definition of $n_{3}^{\mathrm{obs}}$
 - elimination of amplitude dependence
 - scale-invariant persistence criterion
 - geometric interpretation of the crossing
@@ -179,7 +174,7 @@ More precisely, the paper:
 
 - substrate-level derivation of the intrinsic condition
 - universality beyond Heisenberg graphs
-- asymptotics of \(n_{3}^{\mathrm{obs}}\) at large \(q\)
+- asymptotics of $n_{3}^{\mathrm{obs}}$ at large $q$
 
 ## Interpretation of the Result
 
@@ -217,12 +212,12 @@ This is the first fully **closed structural level** of the programme.
 
 ## What O21 Adds
 
-- intrinsic crossing rank \(n_{3}^{\mathrm{obs}}\)
-- elimination of parameters \(C\) and \(\sigma_{\mathrm{BI}}\)
+- intrinsic crossing rank $n_{3}^{\mathrm{obs}}$
+- elimination of parameters $C$ and $\sigma_{\mathrm{BI}}$
 - scale-invariant admissibility
 - geometric BFS-shell interpretation
 - structural resolution of O20
-- restoration of the \(\delta_{\mathrm{pair}} \rightarrow \beta^*\) pathway
+- restoration of the $\delta_{\mathrm{pair}} \rightarrow \beta^*$ pathway
 
 ## Outcome
 
@@ -244,19 +239,19 @@ The observable is now:
 
 ### Substrate-level derivation
 
-Derive \(n_{3}^{\mathrm{obs}}\) directly from χ-dynamics and Born–Infeld constraints.
+Derive $n_{3}^{\mathrm{obs}}$ directly from χ-dynamics and Born–Infeld constraints.
 
 ### Universality
 
 Test the intrinsic criterion beyond Heisenberg graphs.
 
-### Large-\(q\) asymptotics
+### Large-$q$ asymptotics
 
-Determine scaling behaviour of \(n_{3}^{\mathrm{obs}}\).
+Determine scaling behaviour of $n_{3}^{\mathrm{obs}}$.
 
 ### Full cascade derivation
 
-Establish \(\delta_{\mathrm{pair}} \rightarrow \beta^*\) without extra assumptions.
+Establish $\delta_{\mathrm{pair}} \rightarrow \beta^*$ without extra assumptions.
 
 ### Extension
 
