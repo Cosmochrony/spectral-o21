@@ -1,5 +1,5 @@
 This repository contains the source of the **O21 Cosmochrony paper**  
-[*Shell-Level Saturation and the Fibre-Level Transfer δpair →β∗*](out/SpectralO21.pdf).
+*Shell-Level Saturation and the Fibre-Level Transfer δpair →β∗*.
 
 This work extends the **spectral admissibility sub-programme** by resolving  
 the central structural limitation of **O20**:
