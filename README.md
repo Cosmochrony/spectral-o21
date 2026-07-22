@@ -1,5 +1,9 @@
 This repository contains the source of the **O21 Cosmochrony paper**  
-*Shell-Level Saturation and the Fibre-Level Transfer δpair →β∗*.
+*Shell-Level Saturation and the Conditional Fibre-to-Rate Prescription*.
+
+**Version 1.0.1.** The intrinsic fibre-level saturation result is retained.
+The capacity-to-rate expression is scoped as a conditional cross-substrate phenomenological prescription,
+not a native Heisenberg derivation.
 
 This work extends the **spectral admissibility sub-programme** by resolving  
 the central structural limitation of **O20**:
@@ -110,15 +114,18 @@ $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n) \sim n^{-\delta_{\mathrm{pair}}}$
 
 must be compatible with the intrinsic crossing rank $n_{3}^{\mathrm{obs}}$.
 
-This restores a **structural determination** of $\delta_{\mathrm{pair}}$.
+This constrains $\delta_{\mathrm{pair}}$ through an intrinsic fibre-level consistency condition.
 
-### 6. Conditional recovery of the cascade relation
+### 6. Conditional cascade prescription
 
-Under the structural assumption that the intrinsic crossing corresponds to the effective cascade scale:
+Under the shell-alignment assumption and an additional cross-substrate identification:
 
 $\beta^* = \frac{1}{\delta_{\mathrm{pair}} + \frac{1}{2}}$
 
-This resolves the obstruction identified in **O15**.
+This gives a conditional numerical prescription.
+It does not resolve the native growth-equation obstruction: the fixed Heisenberg Cayley graph has a
+$N^{3/4}$ frontier, and no growth process carrying the pair observable is defined in the frozen corpus.
+The numerical value is therefore a phenomenological coincidence check rather than a structural derivation.
 
 ## Mathematical Role of O21
 
@@ -132,8 +139,8 @@ More precisely, the paper:
 - defines a canonical intrinsic crossing rank
 - proves its invariance properties
 - reformulates admissibility as a structural constraint
-- prepares the full derivation of the  
-  $\delta_{\mathrm{pair}} \rightarrow \beta^*$ map
+- supplies an intrinsic fibre-side input to the conditional
+  $\delta_{\mathrm{pair}} \rightarrow \beta^*$ prescription
 
 ## Epistemic Structure of the Paper
 
@@ -143,7 +150,10 @@ More precisely, the paper:
 - fibre structure of **O18**
 - power-law decay regime
 - measured exponent  
-  $\delta_{\mathrm{pair}} \approx 7.44$
+  $\delta_{\mathrm{pair}} \approx 7.44$ under the production $\log(n+1)$ convention
+
+On the same finite windows, conversion to the paper-level $\log n$ definition gives approximately
+$6.6$--$6.9$; the comparison with $[7.4,10.6]$ is therefore convention-sensitive.
 
 ### New results
 
@@ -154,9 +164,11 @@ More precisely, the paper:
 
 ### Remaining open problems
 
-- substrate-level derivation of the intrinsic condition
 - universality beyond Heisenberg graphs
 - asymptotics of $n_{3}^{\mathrm{obs}}$ at large $q$
+
+O22 proves shell alignment and O24 closes the rank-three condition with respect to fibre structure.
+Neither result supplies the independent native growth carrier required by the capacity-to-rate step.
 
 ## Interpretation of the Result
 
@@ -175,7 +187,7 @@ This transforms the programme:
 
 ## Structural Role of O21
 
-**O21 completes the sequence:**
+**O21 extends the sequence:**
 
 - **O16**: pair observable identified
 - **O17**: pair dynamics derived
@@ -190,7 +202,8 @@ Thus:
 - the amplitude is canonical
 - the admissibility condition is intrinsic
 
-This is the first fully **closed structural level** of the programme.
+This closes the intrinsic definition of the fibre-level saturation rank.
+It does not close the independent capacity-to-rate transfer.
 
 ## What O21 Adds
 
@@ -199,7 +212,7 @@ This is the first fully **closed structural level** of the programme.
 - scale-invariant admissibility
 - geometric BFS-shell interpretation
 - structural resolution of O20
-- restoration of the $\delta_{\mathrm{pair}} \rightarrow \beta^*$ pathway
+- calibrated statement of the conditional $\delta_{\mathrm{pair}} \rightarrow \beta^*$ pathway
 
 ## Outcome
 
@@ -212,10 +225,10 @@ The spectral admissibility framework is now:
 
 The observable is now:
 
-- physically justified
+- structurally motivated at the fibre level
 - structurally derived
 - canonically normalised
-- intrinsically admissible
+- equipped with an intrinsic saturation criterion
 
 ## Residual Open Problems
 
@@ -231,9 +244,11 @@ Test the intrinsic criterion beyond Heisenberg graphs.
 
 Determine scaling behaviour of $n_{3}^{\mathrm{obs}}$.
 
-### Full cascade derivation
+### Capacity-to-rate bridge
 
-Establish $\delta_{\mathrm{pair}} \rightarrow \beta^*$ without extra assumptions.
+Construct a new native growth carrier for the pair observable, or justify an explicitly cross-substrate
+identification.
+The transfer as constituted in O4--O7 has no native Heisenberg derivation for the corpus-defined objects.
 
 ### Extension
 
@@ -245,7 +260,7 @@ The programme is now:
 
 - structurally complete at the observable level
 - parameter-free at the admissibility level
-- ready for full dynamical derivation
+- explicit about the missing capacity-to-rate bridge
 
 ## Repository Structure
 
@@ -261,8 +276,7 @@ paper/
 If you reference this work, please cite:
 
 **J. Beau**  
-*Intrinsic Saturation and the Canonical Observable:  
-A Parameter-Free Selection Criterion for the Capacity Exponent*  
+*Shell-Level Saturation and the Conditional Fibre-to-Rate Prescription*
 Zenodo, 2026.
 
 ## Acknowledgements

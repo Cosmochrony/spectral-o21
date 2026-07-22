@@ -1,7 +1,8 @@
 cff-version: 1.2.0
 message: "If you cite this work, please use the metadata from this file."
-title: "Shell-Level Saturation and the Fibre-Level Transfer \delta_ pair ^* O21 — Spectral Admissibility Sub-programme"
+title: "Shell-Level Saturation and the Conditional Fibre-to-Rate Prescription"
 type: software
+version: "1.0.1"
 authors:
   - family-names: "Beau"
     given-names: "Jérôme"
@@ -11,7 +12,7 @@ doi: "10.5281/zenodo.19358961"
 license: "CC-BY-4.0"
 preferred-citation:
   type: article
-  title: "Shell-Level Saturation and the Fibre-Level Transfer \delta_ pair ^* O21 — Spectral Admissibility Sub-programme"
+  title: "Shell-Level Saturation and the Conditional Fibre-to-Rate Prescription"
   authors:
     - family-names: "Beau"
       given-names: "Jérôme"
