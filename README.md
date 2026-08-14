@@ -147,7 +147,7 @@ More precisely, the paper:
 ### Established input
 
 - canonical observable of **O19**
-- fibre structure of **O18**
+- Born–Infeld parity equivariance of **O18** (the fibre identification is an open problem there)
 - power-law decay regime
 - measured exponent  
   $\delta_{\mathrm{pair}} \approx 7.44$ under the production $\log(n+1)$ convention
@@ -167,7 +167,8 @@ $6.6$--$6.9$; the comparison with $[7.4,10.6]$ is therefore convention-sensitive
 - universality beyond Heisenberg graphs
 - asymptotics of $n_{3}^{\mathrm{obs}}$ at large $q$
 
-O22 proves shell alignment and O24 closes the rank-three condition with respect to fibre structure.
+O22 proves shell alignment; O24 relates the rank-three condition to the candidate fibre structure,
+conditionally on the supplied carrier and fibre hypotheses of O23 and O18.
 Neither result supplies the independent native growth carrier required by the capacity-to-rate step.
 
 ## Interpretation of the Result
@@ -191,7 +192,8 @@ This transforms the programme:
 
 - **O16**: pair observable identified
 - **O17**: pair dynamics derived
-- **O18**: fibre structure derived
+- **O18**: Born–Infeld parity established as an equivariant symmetry; the fibre identification
+  stated as an open problem
 - **O19**: canonical amplitude normalisation
 - **O20**: persistence criterion (conditional)
 - **O21**: intrinsic persistence criterion (parameter-free)
@@ -218,15 +220,14 @@ It does not close the independent capacity-to-rate transfer.
 
 The spectral admissibility framework is now:
 
-- fibre-level grounded (**O18**)
+- parity-equivariant at the Born–Infeld level (**O18**), with the fibre identification open
 - amplitude-level canonical (**O19**)
 - persistence-level structured (**O20**)
 - intrinsically formulated (**O21**)
 
 The observable is now:
 
-- structurally motivated at the fibre level
-- structurally derived
+- structurally motivated at the pair level (fibre identification open, O18 Problem 2.8)
 - canonically normalised
 - equipped with an intrinsic saturation criterion
 
