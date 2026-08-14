@@ -192,7 +192,7 @@ This transforms the programme:
 
 - **O16**: pair observable identified
 - **O17**: pair dynamics derived
-- **O18**: Born–Infeld parity established as an equivariant symmetry; the fibre identification
+- **O18**: Born–Infeld parity established as a covariance of the response family; the fibre identification
   stated as an open problem
 - **O19**: canonical amplitude normalisation
 - **O20**: persistence criterion (conditional)
