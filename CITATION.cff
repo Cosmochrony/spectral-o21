@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you cite this work, please use the metadata from this file."
 title: "Shell-Level Saturation and the Conditional Fibre-to-Rate Prescription"
 type: software
-version: "1.0.1"
+version: "1.1"
 authors:
   - family-names: "Beau"
     given-names: "Jérôme"
