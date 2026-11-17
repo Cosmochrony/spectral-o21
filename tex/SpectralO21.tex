@@ -30,7 +30,7 @@
   \large O21 --- Spectral Admissibility Sub-programme}
 \author{J.~Beau\\[0.5ex]
 \small Independent Researcher}
-\date{2026\\Version 1.1}
+\date{2026\\Version 1.2}
 
 \begin{document}
 
@@ -58,10 +58,10 @@
     $n_3^{\mathrm{obs}}$ to align with a BFS shell of the Cayley
     graph $\mathrm{Cay}(G_q, S_q)$, providing a geometric
     interpretation of saturation.
-    Under this shell-alignment hypothesis and an additional
-    cross-substrate identification, the O7 relation
-    $\beta^* = 1/(\delta_{\mathrm{pair}} + \tfrac{1}{2})$
-    defines a conditional phenomenological prescription.
+    The historical reciprocal image $1/(\delta_{\mathrm{pair}}+1/2)$ is retained as a
+    defined numerical diagnostic only.
+    O6 proves an upper growth bound and refutes equality under its own premises.
+    Neither shell alignment nor a cross-substrate identification repairs that failed implication.
     The fibre construction does not supply a native Heisenberg
     growth equation carrying the pair observable.
 
@@ -69,6 +69,9 @@
     conditions on the fibre side of the chain.
     Those results do not supply the independent Heisenberg
     growth carrier required by the capacity-to-rate step.
+    \textbf{Interpretive outlook.}
+    A crossing-rank construction and a physical particle-hierarchy rate remain distinct; the
+    reciprocal comparison supplies no rate-selection mechanism.
   \end{abstract}
 
   \paragraph{Keywords.}
@@ -172,9 +175,8 @@
   properties.
   Section~\ref{sec:shell-conjecture} states the shell-alignment
   conjecture and discusses its numerical status.
-  Section~\ref{sec:transfer} states the assumptions under which
-  the $\delta_{\mathrm{pair}} \to \beta^*$ expression can be
-  used as a cross-substrate phenomenological prescription.
+  Section~\ref{sec:transfer} withdraws the former transfer theorem and defines the reciprocal
+  image solely as a legacy numerical diagnostic.
   Section~\ref{sec:conclusion} discusses open directions.
 
   \section{Background: From Block to Fibre Level}
@@ -501,119 +503,66 @@
 
     A decisive test requires computing
     $n_3^{\mathrm{obs}}$ for all conjugate pairs with
-    $\delta_{\mathrm{pair}} \in [7.4, 10.6]$ across
+    $\delta_{\mathrm{pair}}$ in the historical range $[7.4,10.6]$ across
     $q \in \{101, 151, 211\}$, using the canonical pair
     observable of O19~\cite{Beau2026a23}.
 
-  \section{The Conditional $\delta_{\mathrm{pair}} \to \beta^*$
-  Prescription}
+  \section{The Legacy $\delta_{\mathrm{pair}} \to \beta^*$
+  Diagnostic and the Withdrawn Transfer Claim}
   \label{sec:transfer}
 
-  \subsection{Conditions of applicability of the O7 relation}
+  \subsection{Status of the O7 reciprocal comparison}
 
-    The structural relation
+    The former O7 equality is replaced here by a definition of a legacy diagnostic:
     \begin{equation}
       \label{eq:O7-relation}
-      \beta^* = \frac{1}{\delta + \tfrac{1}{2}},
+      \beta_{\mathrm{diag}}(\delta):=\frac{1}{\delta+\tfrac12}.
     \end{equation}
-    derived in the LPS reduced model of O7~\cite{Beau2026a11},
-    rests on four conditions when applied to the Heisenberg
-    pair observable:
-    \begin{enumerate}[label=(\roman*)]
-  \item the capacity observable decays as a stable power law
-  $\sigma(n) \sim n^{-\delta}$ in the pre-saturation
-  regime;
-  \item the pre-saturation window is sufficiently wide for
-  an asymptotic regime to be established;
-  \item the saturation threshold is well-defined, in the
-  sense that the observable crosses it at a determinate
-  rank.
-  \item the O7 exploration variable and redundancy law are
-  identified with a Heisenberg growth process whose
-  multiplicative observable is
-  $\sigma_{\mathrm{pair}}^{\mathrm{can}}$.
-    \end{enumerate}
-    O15~\cite{Beau2026a19} established that these conditions
-    fail at the block level.
-    O16--O19 showed that conditions (i) and (ii) are satisfied
-    at the fibre level with $\delta = \delta_{\mathrm{pair}}
-  \approx 7.44$.
-    Condition (iii) remained implicit until the present paper:
-    the saturation rank was defined via the fitted amplitude
-    $C$, which is not intrinsic.
-    Definition~\ref{def:n3obs} resolves condition~\textup{(iii)}
-    by providing an
-    intrinsic, pipeline-independent saturation rank.
-    Condition~\textup{(iv)} is independent of shell alignment.
-    The Span-Growth Note shows that it has no native Heisenberg
-    derivation for the corpus-defined objects: the Cayley
-    frontier scales as $N^{3/4}$ rather than as a square root,
-    and block capacity rather than pair capacity enters the
-    exact native increment identity~\cite{Beau2026sgn}.
+    O6~\cite{Beau2026a10} proves only $\beta_{\mathrm{eff}}\leq1/(\alpha+1/2)$ under its
+    effective growth hypothesis (G$_R$) and $\mathcal R_n\sim p(n)^{-\alpha}$.
+    Its exact power-law countermodel $\alpha=8$, $p(n)=n^{1/17}$ satisfies those premises
+    while $\beta=1/17<2/17$ lies outside $(0.09,0.13)$.
+    Thus equality fails before any transport to a Heisenberg pair observable is considered.
+    A decay fit, a wide window, a determinate crossing rank and a cross-substrate identification
+    do not establish the missing lower growth bound or select equality.
+    The Span-Growth Note supplies the separate native-transfer obstruction for the corpus-defined
+    Heisenberg objects~\cite{Beau2026sgn}.
 
-  \subsection{Conditional transfer prescription}
+  \subsection{Withdrawal of the transfer theorem}
 
-    \begin{theorem}[Cross-substrate prescription]
+    \begin{remark}[Former transfer claim withdrawn]
       \label{thm:conditional-transfer}
-      Assume that $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
-      exhibits a stable power-law decay with exponent
-      $\delta_{\mathrm{pair}}$ over a pre-saturation window
-      $[n_0, n_1]$ satisfying conditions \textup{(i)} and
-      \textup{(ii)} above, and that
-      Conjecture~\ref{conj:shell-saturation} holds for the
-      conjugate pair $\{c, q-c\}$, and condition
-      \textup{(iv)} is imposed as an external identification.
-      Then the O7 structural relation~\eqref{eq:O7-relation}
-      applies with $\delta = \delta_{\mathrm{pair}}$, and the
-      cascade exponent satisfies
+      The former theorem asserting a reciprocal cascade exponent under shell alignment and an
+      external identification is withdrawn.
+      Its conclusion was not a consequence of the cited O6/O7 premises.
+      For a supplied pair exponent one may define
       \begin{equation}
         \label{eq:transfer}
-        \beta^*
-        = \frac{1}{\delta_{\mathrm{pair}} + \tfrac{1}{2}}.
+        \beta^*_{\mathrm{presc}}:=\frac{1}{\delta_{\mathrm{pair}}+\tfrac12}.
       \end{equation}
-    \end{theorem}
+      This is a legacy comparison value, not the physical cascade exponent $\beta^*$ and not
+      a theorem conditional on the existence of a transport map.
+    \end{remark}
 
-    \begin{proof}
-      Condition (i) is satisfied by the power-law decay of
-      $\sigma_{\mathrm{pair}}^{\mathrm{can}}$ with $R^2 \approx 1$,
-      established in
-      O16--O19~\cite{Beau2026a20,Beau2026a21,Beau2026a22,Beau2026a23}.
-      Condition (ii) is satisfied by the pre-saturation window
-      $[n_0, n_1]$ of the O12/O13
-      pipeline~\cite{Beau2026a16,Beau2026a17}, which grows with
-      $q$ and supports an asymptotically stable power-law regime.
-      Condition (iii) is satisfied under
-      Conjecture~\ref{conj:shell-saturation}: the saturation rank
-      $n_3^{\mathrm{obs}}$ aligns with a BFS shell of
-      $\mathrm{Cay}(G_q, S_q)$, providing a determinate,
-      scale-independent saturation event at a geometric rank of
-      the cascade.
-      With conditions \textup{(i)}--\textup{(iii)} satisfied and
-      condition \textup{(iv)} imposed, the O7 algebra yields
-      the conditional expression~\eqref{eq:transfer}.
-    \end{proof}
-
-    \begin{remark}[Conditional status]
+    \begin{remark}[Independent status of the rank construction]
       \label{rem:conditional}
-      Theorem~\ref{thm:conditional-transfer} is conditional on
-      both Conjecture~\ref{conj:shell-saturation} and the
-      independent cross-substrate identification in condition
-      \textup{(iv)}.
-      Establishing shell alignment alone does not promote the
-      prescription to a native transfer theorem.
+      This withdrawal does not change the two-point crossing formula, the stated shell-alignment
+      conjecture or the reported finite-prime observations.
+      Those objects supply no reciprocal rate equality.
+      No additional saturation hypothesis is introduced to restore the withdrawn theorem.
     \end{remark}
 
   \subsection{Numerical evaluation}
 
     Substituting $\delta_{\mathrm{pair}} \approx 7.44$
-    into the conditional prescription gives
+    into the defined legacy diagnostic gives
     \begin{equation}
       \label{eq:beta-numerical}
       \beta^*_{\mathrm{presc}}
       := \frac{1}{7.44 + 0.5}
       \approx 0.126,
     \end{equation}
-    which lies at the upper boundary of the phenomenological
+    which lies near the upper boundary of the phenomenological
     window $\beta^* \in (0.09, 0.13)$ established
     in~O3~\cite{Beau2026a7}.
 
@@ -622,13 +571,9 @@
       The value $\beta^*_{\mathrm{presc}} \approx 0.126$ is a
       phenomenological coincidence check near the upper boundary
       of the target, not a structural derivation.
-      Numerically,
-      $\delta_{\mathrm{pair,min}} = 2\delta_{c,\min} \approx 7.44$,
-      which places the measured exponent at the lower boundary of
-      the physically admissible sub-spectrum $[7.4, 10.6]$.
-      A value of $\delta_{\mathrm{pair}}$ higher in this
-      sub-spectrum would yield a smaller $\beta^*$, deeper within
-      the window.
+      The interval $[7.4,10.6]$ is a historical comparison range, not a selected physical sub-spectrum.
+      A larger supplied $\delta_{\mathrm{pair}}$ decreases the diagnostic reciprocal; it does
+      not determine the physical $\beta^*$ or guarantee membership in its open window.
       The value $7.44$ uses the production convention
       $\log(n+1)$.
       On the same finite windows, translation to the paper-level
@@ -684,13 +629,11 @@
   discrete geometric interpretation as a BFS shell depth in
   $\mathrm{Cay}(G_q, S_q)$, providing a well-defined and
   scale-independent saturation event.
-  With the additional cross-substrate identification, the O7 relation
-  $\beta^* = 1/(\delta_{\mathrm{pair}} + \tfrac{1}{2})$
-  gives the conditional value
-  $\beta^*_{\mathrm{presc}} \approx 0.126$ within the
-  phenomenological window.
-  This agreement is a coincidence check rather than a native
-  Heisenberg derivation~\cite{Beau2026sgn}.
+  The former transfer theorem is withdrawn: the additional cross-substrate identification
+  does not repair the reciprocal equality refuted by O6's countermodel.
+  The defined legacy image $\beta^*_{\mathrm{presc}}\approx0.126$ is a numerical comparison
+  for a supplied exponent, not a consequence of shell alignment or a determination of $\beta^*$.
+  The native Heisenberg transfer obstruction remains separate~\cite{Beau2026sgn}.
 
   The construction resolves the intrinsic-definition problem
   for the fibre saturation rank.
@@ -701,13 +644,9 @@
   O22 proves shell alignment, and O24 closes the rank-three
   condition with respect to the fibre structure
   alone~\cite{Beau2026a26,Beau2026a28}.
-  These results discharge the fibre-side conditions inherited
-  by the present construction without changing the status of
-  condition~\textup{(iv)}.
-  The remaining task is therefore a new native growth process
-  carrying the pair observable, or an explicitly stated
-  cross-substrate hypothesis; neither follows from the
-  intrinsic saturation rank.
+  These fibre-side statements do not select a rate or restore the withdrawn reciprocal theorem.
+  A new growth carrier and an independently justified rate-selection mechanism would be needed;
+  neither follows from the crossing rank or from a transport identification alone.
 
 
   \bibliographystyle{plain}

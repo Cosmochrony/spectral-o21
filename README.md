@@ -1,9 +1,14 @@
 This repository contains the source of the **O21 Cosmochrony paper**  
 *Shell-Level Saturation and the Conditional Fibre-to-Rate Prescription*.
 
-**Version 1.0.1.** The intrinsic fibre-level saturation result is retained.
-The capacity-to-rate expression is scoped as a conditional cross-substrate phenomenological prescription,
-not a native Heisenberg derivation.
+**Version 1.2.** Withdraws the former cross-substrate transfer theorem and retains its numerical evaluation
+only as a defined legacy diagnostic. The two-point crossing formula and finite-prime observations are unchanged.
+
+O6 proves only $\beta_{\mathrm{eff}}\leq1/(\alpha+1/2)$ under its effective growth hypothesis
+(G_R) and a power-law redundancy Ansatz in the exploration variable $p$.
+Its countermodel $\alpha=8$, $p=n^{1/17}$ satisfies those premises but refutes equality.
+The reciprocal is retained only as a defined legacy diagnostic; the historical range $[7.4,10.6]$
+is neither a necessary nor a sufficient condition selecting the charged-lepton cascade window.
 
 This work extends the **spectral admissibility sub-programme** by resolving  
 the central structural limitation of **O20**:
@@ -19,8 +24,8 @@ the central structural limitation of **O20**:
 $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
 - the admissible sub-spectrum is characterised by a threshold-crossing condition
 
-- the persistence criterion selects an interval  
-$\delta_{\mathrm{pair}} \in [7.4, 10.6]$
+- the persistence template defines a symbolic interval from supplied threshold/amplitude/window data;
+  it does not select the historical numerical range $[7.4,10.6]$
 
 However:
 
@@ -116,16 +121,16 @@ must be compatible with the intrinsic crossing rank $n_{3}^{\mathrm{obs}}$.
 
 This constrains $\delta_{\mathrm{pair}}$ through an intrinsic fibre-level consistency condition.
 
-### 6. Conditional cascade prescription
+### 6. Withdrawn transfer theorem and legacy diagnostic
 
-Under the shell-alignment assumption and an additional cross-substrate identification:
+The former theorem inferring the physical cascade exponent from shell alignment and an external
+cross-substrate identification is withdrawn.
+One may define
 
-$\beta^* = \frac{1}{\delta_{\mathrm{pair}} + \frac{1}{2}}$
+$\beta^*_{\mathrm{presc}}:=1/(\delta_{\mathrm{pair}}+1/2)$
 
-This gives a conditional numerical prescription.
-It does not resolve the native growth-equation obstruction: the fixed Heisenberg Cayley graph has a
-$N^{3/4}$ frontier, and no growth process carrying the pair observable is defined in the frozen corpus.
-The numerical value is therefore a phenomenological coincidence check rather than a structural derivation.
+as a numerical comparison. It is not the physical $\beta^*$ and is not established by the former premises.
+The native Heisenberg obstruction remains independent: no pair-capacity growth carrier is supplied.
 
 ## Mathematical Role of O21
 
@@ -139,8 +144,7 @@ More precisely, the paper:
 - defines a canonical intrinsic crossing rank
 - proves its invariance properties
 - reformulates admissibility as a structural constraint
-- supplies an intrinsic fibre-side input to the conditional
-  $\delta_{\mathrm{pair}} \rightarrow \beta^*$ prescription
+- separates the crossing-rank construction from the withdrawn rate-transfer theorem
 
 ## Epistemic Structure of the Paper
 
@@ -214,7 +218,7 @@ It does not close the independent capacity-to-rate transfer.
 - scale-invariant admissibility
 - geometric BFS-shell interpretation
 - structural resolution of O20
-- calibrated statement of the conditional $\delta_{\mathrm{pair}} \rightarrow \beta^*$ pathway
+- explicit withdrawal of the rate-transfer theorem; the reciprocal is a defined diagnostic only
 
 ## Outcome
 
