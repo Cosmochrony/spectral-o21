@@ -252,7 +252,8 @@ Determine scaling behaviour of $n_{3}^{\mathrm{obs}}$.
 ### Capacity-to-rate bridge
 
 Construct a new native growth carrier for the pair observable, or justify an explicitly cross-substrate
-identification.
+identification, and derive an independent rate-selection law.
+A carrier identification alone does not repair the reciprocal equality refuted under O6’s premises.
 The transfer as constituted in O4--O7 has no native Heisenberg derivation for the corpus-defined objects.
 
 ### Extension

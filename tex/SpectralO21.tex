@@ -41,67 +41,18 @@
   \maketitle
 
   \begin{abstract}
-    The spectral admissibility sub-programme of Cosmochrony has
-    identified the canonical fibre-level observable
-    $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ as the relevant
-    quantity for the lepton mass hierarchy.
-    However, existing saturation criteria rely on the power-law
-    fit $\sigma(n) \sim C\,n^{-\delta}$, whose amplitude $C$ and
-    exponent $\delta$ depend on the fitting window and are not
-    intrinsic.
-
-    We construct a fully observable saturation rank
-    $n_3^{\mathrm{obs}}(n_0, n_1, q)$ by eliminating both $C$
-    and $\delta$ using two local measurements of
-    $\sigma_{\mathrm{pair}}^{\mathrm{can}}$.
-    This rank is invariant under global rescaling and all
-    pipeline-dependent normalisations, and depends only on
-    directly measurable quantities.
-
-    We conjecture that physical admissibility requires
-    $n_3^{\mathrm{obs}}$ to align with a BFS shell of the Cayley
-    graph $\mathrm{Cay}(G_q, S_q)$, providing a geometric
-    interpretation of saturation.
-    The historical reciprocal image $1/(\delta_{\mathrm{pair}}+1/2)$ is retained as a
-    defined numerical diagnostic only.
-    O6 proves an upper growth bound and refutes equality under its own premises.
-    Neither shell alignment nor a cross-substrate identification repairs that failed implication.
-    The fibre construction does not supply a native Heisenberg
-    growth equation carrying the pair observable.
-
-    O22 and O24 discharge the shell-alignment and rank-three
-    conditions on the fibre side of the chain.
-    Those results do not supply the independent Heisenberg
-    growth carrier required by the capacity-to-rate step.
-    \textbf{Interpretive outlook.}
-    A crossing-rank construction and a physical particle-hierarchy rate remain distinct; the
-    reciprocal comparison supplies no rate-selection mechanism.
-  \end{abstract}
-
-  \paragraph{Keywords.}
-    spectral admissibility; non-injective projection; fibre-level observables; Weil representation; Heisenberg graphs;
-    projective capacity; power-law decay; intrinsic saturation criterion; BFS shell structure; scale invariance; lepton
-    mass hierarchy; cascade exponent; subdiffusive growth
-
-    \clearpage
-    \tableofcontents
-
-    \clearpage
-  \section{Introduction}
-  \label{sec:intro}
-
-  The spectral admissibility sub-programme of the Cosmochrony
-  framework~\cite{Cosmochrony} has progressively clarified a
-  structural tension between the exact Weil-block capacity
-  exponent and the phenomenological target set by the lepton
-  mass hierarchy.
+    The spectral admissibility sub-programme of the Cosmochrony
+  framework~\cite{Cosmochrony} historically compared the exact Weil-block
+  capacity exponent with a range obtained by inserting the lepton-hierarchy
+  benchmark into a reciprocal rate prescription.
+  That prescription is not a consequence of O6: its premises give only an
+  upper bound and admit a counterexample to the equality.
   Papers O13--O15~\cite{Beau2026a17,Beau2026a18,Beau2026a19}
-  ruled out finite-size effects and aggregation corrections as
-  resolutions; O16--O19~\cite{Beau2026a20,Beau2026a21,Beau2026a22,Beau2026a23}
-  relocated the problem at the fibre level, establishing that
-  the physically relevant observable is the canonical pair
-  quantity $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
-  constructed from conjugate Weil blocks $\{c, q-c\}$.
+  study finite-size and aggregation effects on the capacity observables;
+  changing those observables does not establish a physical rate law.
+  The pair quantity $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
+  constructed from conjugate Weil blocks $\{c,q-c\}$ remains a separate
+  object for the local crossing diagnostic considered here.
   Paper O20~\cite{Beau2026a24} proposed a projective persistence
   criterion for this observable, conditional on two structural
   hypotheses concerning its relationship to the Born--Infeld
@@ -195,19 +146,18 @@
     $q$, establishing the mean block-level observable
     $\bar{\sigma}(n)$ with decay exponent
     $\hat{\delta}_{\mathrm{exact}} \approx 3.72$.
-    O14 and O15~\cite{Beau2026a18,Beau2026a19} demonstrated that
-    this exponent lies structurally below the phenomenological
-    target $\delta \in [7.4, 10.6]$, and that no aggregation
-    of block data can bridge this gap (O15 Corollary~4.8).
+    The block exponent lies below the historical comparison range
+    $\delta\in[7.4,10.6]$; this comparison does not exclude a physical
+    rate, since O6 supplies no lower rate bound.
+    O15~\cite{Beau2026a19} studies specified aggregation procedures,
+    not a selection theorem for the physical rate.
 
-  \subsection{Fibre-level resolution}
+  \subsection{Pair-level observable}
 
-    O16~\cite{Beau2026a20} identified the resolution: the
-    physically relevant observable is defined on conjugate pairs
-    $\{c, q-c\}$, giving
-    $\sigma_{\mathrm{pair}}(n) = \sigma_c(n)\,\sigma_{q-c}(n)$
-    with exponent $\delta_{\mathrm{pair}} = 2\delta_c \approx
-  7.44$.
+    O16~\cite{Beau2026a20} introduced the conjugate-pair observable
+    $\sigma_{\mathrm{pair}}(n)=\sigma_c(n)\,\sigma_{q-c}(n)$
+    with exponent $\delta_{\mathrm{pair}}=2\delta_c\approx7.44$.
+    Its comparison with the historical range does not resolve the rate-selection problem.
     O17~\cite{Beau2026a21} established the structural derivation:
     $\delta_{q-c} = \delta_c$ follows from
     $\rho_{q-c} = \overline{\rho_c}$ and norm-invariance of
@@ -465,7 +415,7 @@
         61 & $(1,\,60)$ & 7.512 & 1.0000 & 4.80 & 0.20 \\
         \hline
       \end{tabular}
-      \caption{Observable saturation rank for available pairs with
+      \caption{Observable saturation rank for available pairs selected by the historical comparison range
         $\delta_{\mathrm{pair}} \in [7.4, 10.6]$.
         $n_3^{\mathrm{obs}}$ is computed from
         Definition~\ref{def:n3obs} with $(n_0, n_1) = (2, 7)$,
