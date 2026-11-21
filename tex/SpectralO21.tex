@@ -518,15 +518,14 @@
         \hline
         Printed in v.~$\leq1.2$ & 7.512 & 1.0000 & 4.80 & 0.20 \\
         O12 output, one block pair & 7.512 & 1.0000 & 3.65 & 0.35 \\
-        O25 output, mean of 50 pairs & 11.79 & 0.992 & 3.51 & 0.50 \\
+        O25 output, mean of 50 block samples & 11.79 & 0.992 & 3.51 & 0.50 \\
         \hline
       \end{tabular}
       \caption{Observable saturation rank at $q=61$ for the pair $(1,60)$, with $(n_0, n_1) = (2, 7)$, the
         pre-saturation window of~\cite{Beau2026a17}; $\delta_{\mathrm{pair}}$ and $R^2$ are fitted against
         $\log(n+1)$ on that window.
-        The O12 output is the $q=61$ file of the O12 pipeline (seed 0, $15$ blocks), which contains the one
-        conjugate block pair $(1,27,2)$, $(60,3,30)$ used for the earlier row; it reproduces that row's
-        exponent and $R^2$, but Definition~\ref{def:n3obs} applied to it gives $3.65$, not $4.80$.
+        The O12 output is the $q=61$ file of the O12 pipeline (seed 0, $15$ blocks), whose one conjugate block pair
+        $(1,27,2)$, $(60,3,30)$ reproduces the earlier row's exponent, $R^2$ and bracket, but Definition~\ref{def:n3obs} applied to it gives $3.65$, not $4.80$.
         The O25 output is the $q=61$ campaign file (seed 42, $50$ block samples per pair).
         Script: \texttt{code/table1\_recompute.py}.
         In both files $\sigma_c(n)$ is the new Gram--Schmidt rank in shell $n$ divided by $|S_n|$, and the pair

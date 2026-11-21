@@ -55,8 +55,8 @@ supplied, not derived.
 The paper conjectures that a conjugate pair is physically admissible if and only if
 $n_3^{\mathrm{obs}}$ lies close to a BFS shell of $\mathrm{Cay}(G_q,S_q)$ (Conjecture 4.1).
 Version 1.3 withdraws the single data point printed earlier ($q=61$, $(c,q-c)=(1,60)$,
-$n_3^{\mathrm{obs}}\approx4.80$, distance $0.20$). Its source, the O12 $q=61$ output kept in the O14
-repository, reproduces the printed exponent $7.512$, $R^2$ and bracket $q^2\sigma(4)\approx6.64$,
+$n_3^{\mathrm{obs}}\approx4.80$, distance $0.20$). The O12 $q=61$ output kept in the O14
+repository reproduces the printed exponent $7.512$, $R^2$ and bracket $q^2\sigma(4)\approx6.64$,
 $q^2\sigma(5)\approx1.66$, but both bracket values lie below $9$: Definition 3.1 gives
 $n_3^{\mathrm{obs}}\approx3.65$ (distance $\approx0.35$, crossing between shells 3 and 4). The printed
 $4.80$ coincides with the O12 block exponent $\hat\delta\approx4.80$ stored in the same file. The O25
