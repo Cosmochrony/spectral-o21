@@ -6,7 +6,7 @@ The observable saturation rank is not invariant under a global rescaling of the 
 is ratio-invariant, but the threshold base is not, so the rank scales as $\lambda^{1/\delta}$ under
 $\sigma\mapsto\lambda\sigma$. It is defined for the canonical normalisation of **O19**.
 The abstract no longer states that the programme has identified the pair observable as the relevant
-quantity for the lepton mass hierarchy: no result of O16--O21 establishes that link, which remains an
+quantity for the lepton mass hierarchy: no result of O16–O21 establishes that link, which remains an
 open research motivation. The threshold $\Sigma_c(n_3)=3$ is a supplied selection rule (**O24**);
 its reading as three physically stable directions is an interpretive hypothesis.
 

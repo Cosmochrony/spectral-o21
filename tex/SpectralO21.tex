@@ -80,8 +80,9 @@
     not identify that depth with $n_3^{\mathrm{obs}}$, so the shell-alignment
     conjecture remains open.
     O24 shows,
-    conditional on a supplied carrier, that the rank-three threshold is
-    insensitive to fibre cardinality; the threshold itself remains a
+    conditional on a supplied carrier and on the open identification of
+    $\Sigma_c$ with the carrier dimension, that the rank-three threshold
+    is insensitive to fibre cardinality; the threshold itself remains a
     supplied selection rule.
     Those results do not supply the independent Heisenberg
     growth carrier required by the capacity-to-rate step.
@@ -92,7 +93,7 @@
 
   \paragraph{Keywords.}
     spectral admissibility; non-injective projection; fibre-level observables; Weil representation; Heisenberg graphs;
-    projective capacity; power-law decay; intrinsic saturation criterion; BFS shell structure; scale invariance; lepton
+    projective capacity; power-law decay; saturation criterion free of fitted parameters; BFS shell structure; normalisation dependence; lepton
     mass hierarchy; cascade exponent; subdiffusive growth
 
     \clearpage
@@ -135,18 +136,18 @@
 
   The central problem addressed in this paper is therefore:
   can the saturation condition of O20 be reformulated in a
-  way that is entirely independent of fitted parameters and
-  normalisation choices?
+  way that is entirely independent of fitted parameters?
 
   We construct a positive answer under the power-law
-  hypothesis.
+  hypothesis; the resulting rank still depends on the
+  normalisation of the observable (Remark~\ref{rem:invariance}).
   By combining two local observations of
   $\sigma_{\mathrm{pair}}^{\mathrm{can}}$ at reference shells
   $n_0$ and $n_1$, one can eliminate both $C$ and
   $\delta_{\mathrm{pair}}$ simultaneously, producing a fully
   observable saturation rank $n_3^{\mathrm{obs}}(n_0, n_1, q)$
   that contains no fitted parameter.
-  The rank is formed from the canonical observable of
+  The rank is formed from the canonical observable proposed in
   O19~\cite{Beau2026a23}, which quotients the amplitude artefact
   $r(c,q) \in \{1,2,3,4\}$ identified in
   O17--O19~\cite{Beau2026a21,Beau2026a22,Beau2026a23} before the rank
@@ -181,11 +182,12 @@
   non-injective projection~$\Pi$ is an interpretive hypothesis, not a
   result of this paper.
 
-  The criterion constructed here uses only observed values and
-  inherits the basis independence of the canonical observable of
-  O19; it is defined for that normalisation and is not invariant
-  under a rescaling of the observable.
-  It provides an intrinsic fibre-side ingredient for the
+  The criterion constructed here uses only observed values.
+  It is defined for the canonical normalisation proposed in O19,
+  whose pipeline independence (O19 Proposition~7.2) is stated there
+  with a proof sketch conditional on the outcome of its tests, and it
+  is not invariant under a rescaling of the observable.
+  It provides a fibre-side ingredient, free of fitted parameters, for the
   candidate $\delta_{\mathrm{pair}} \to \beta^*$ pathway.
   It does not derive the growth-equation side of that pathway
   on the Heisenberg substrate~\cite{Beau2026sgn}.
@@ -194,8 +196,8 @@
   Section~\ref{sec:background} recalls the relevant results of
   O16--O20.
   Section~\ref{sec:observable-criterion} constructs
-  $n_3^{\mathrm{obs}}$ and establishes its invariance
-  properties.
+  $n_3^{\mathrm{obs}}$ and establishes its window independence
+  and its behaviour under rescaling.
   Section~\ref{sec:shell-conjecture} states the shell-alignment
   conjecture and discusses its numerical status.
   Section~\ref{sec:transfer} withdraws the former transfer theorem and defines the reciprocal
@@ -462,8 +464,10 @@
     The threshold $9/q^2$ is therefore the normalised product of
     the two fibre-level cumulative spans at the
     three-dimensional saturation point.
-    This identification is independent of any basis choice,
-    as it involves only cumulative span dimensions.
+    This identification uses the canonical normalisation of
+    O19 ($\sigma_c = \Sigma^{(c)}/q$ with the amplitude factor
+    quotiented); it inherits whatever basis dependence the
+    cumulative spans retain (O19 Lemma~2.4).
     Reading the integer $3$ as a number of physically stable
     directions selected by the projection $\Pi$ in the Weil
     realisation of $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ is an
@@ -693,7 +697,8 @@
   BFS shell; it does not identify that depth with $n_3^{\mathrm{obs}}$, and
   Conjecture~\ref{conj:shell-saturation} remains open.
   O24 shows,
-  conditional on a supplied carrier, that the supplied rank-three
+  conditional on a supplied carrier and on the open identification of
+  $\Sigma_c$ with the carrier dimension, that the supplied rank-three
   threshold is insensitive to fibre cardinality~\cite{Beau2026a28}.
   These fibre-side statements do not select a rate or restore the withdrawn reciprocal theorem.
   A new growth carrier and an independently justified rate-selection mechanism would be needed;
