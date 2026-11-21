@@ -1,10 +1,15 @@
 This repository contains the source of the **O21 Cosmochrony paper**  
 *Shell-Level Saturation and the Conditional Fibre-to-Rate Prescription*.
 
+**Version 1.3.1.** Follows O19 1.3: the canonical normalisation of O19 is a case-dependent proposal
+whose independence tests are open (its former Proposition 7.2 is now Open Problem 7.2), and the values
+$r(c,q)\in\{1,2,3,4\}$ are a historical hypothesis (on the real pipeline O16 gives $r\equiv1$ within its
+contract). The rank is described as defined for a fixed normalisation; no result of 1.3 changes.
+
 **Version 1.3.** Corrects two statements of earlier versions.
 The observable saturation rank is not invariant under a global rescaling of the observable: its exponent
 is ratio-invariant, but the threshold base is not, so the rank scales as $\lambda^{1/\delta}$ under
-$\sigma\mapsto\lambda\sigma$. It is defined for the canonical normalisation of **O19**.
+$\sigma\mapsto\lambda\sigma$. It is defined for a fixed normalisation; the canonical one proposed in **O19** has open tests.
 The abstract no longer states that the programme has identified the pair observable as the relevant
 quantity for the lepton mass hierarchy: no result of O16–O21 establishes that link, which remains an
 open research motivation. The threshold $\Sigma_c(n_3)=3$ is a supplied selection rule (**O24**);
@@ -26,7 +31,7 @@ is neither a necessary nor a sufficient condition selecting the charged-lepton c
 ## Context
 
 **O20** proposed a projective persistence criterion for the canonical pair observable
-$\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ of **O19**, conditional on two hypotheses relating it to
+$\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ proposed in **O19**, conditional on two hypotheses relating it to
 the Born–Infeld saturation envelope.
 Its crossing rank depended on the fitted amplitude $C$ and exponent $\delta$ of the power law
 $\sigma(n)\approx C\,n^{-\delta}$, and therefore on the fitting window.
@@ -43,7 +48,7 @@ $n_3^{\mathrm{obs}}(n_0,n_1,q)=n_0\left(\frac{q^2\,\sigma(n_0)}{9}\right)^{\log(
   its variation with $(n_0,n_1)$ measures departures from that regime.
 - It is **not** invariant under $\sigma\mapsto\lambda\sigma$: it scales as $\lambda^{1/\delta}$
   (Remark 3.3). It therefore depends on the normalisation of the observable and is meaningful for the
-  canonical normalisation of **O19**, which quotients the amplitude factor $r(c,q)\in\{1,2,3,4\}$
+  canonical normalisation proposed in **O19** (open tests), which would quotient any amplitude factor $r(c,q)$
   before the rank is formed.
 - Its remaining inputs are that normalisation, the reference shells and the threshold $9/q^2$.
 
@@ -79,7 +84,7 @@ The native Heisenberg obstruction remains independent: no pair-capacity growth c
 
 ### Inputs
 
-- canonical observable and normalisation of **O19**
+- canonical observable and normalisation proposed in **O19** (open tests, Open Problem 7.2)
 - Born–Infeld parity equivariance of **O18** (the fibre identification is an open problem there)
 - power-law decay regime
 - the supplied selection rule $\Sigma_c(n_3)=3$
@@ -119,7 +124,7 @@ Neither result supplies the independent native growth carrier required by the ca
 - **O17**: pair dynamics derived
 - **O18**: Born–Infeld parity established as a covariance of the response family; the fibre identification
   stated as an open problem
-- **O19**: canonical amplitude normalisation
+- **O19**: canonical amplitude normalisation proposed, with open tests
 - **O20**: persistence criterion (conditional)
 - **O21**: crossing rank free of fitted parameters, for a fixed normalisation
 

@@ -34,7 +34,7 @@
   \large O21 --- Spectral Admissibility Sub-programme}
 \author{J.~Beau\\[0.5ex]
 \small Independent Researcher}
-\date{2026\\Version 1.3}
+\date{2026\\Version 1.3.1}
 
 \begin{document}
 
@@ -61,8 +61,8 @@
     under a global rescaling $\sigma \mapsto \lambda\sigma$ its exponent
     is unchanged while the threshold base is not, so the rank scales as
     $\lambda^{1/\delta}$.
-    It is defined relative to the canonical normalisation of the
-    pair observable.
+    It is defined relative to a fixed normalisation of the pair observable;
+    the canonical one proposed in O19 has open tests.
 
     We conjecture that physical admissibility requires
     $n_3^{\mathrm{obs}}$ to align with a BFS shell of the Cayley
@@ -148,10 +148,10 @@
   observable saturation rank $n_3^{\mathrm{obs}}(n_0, n_1, q)$
   that contains no fitted parameter.
   The rank is formed from the canonical observable proposed in
-  O19~\cite{Beau2026a23}, which quotients the amplitude artefact
-  $r(c,q) \in \{1,2,3,4\}$ identified in
-  O17--O19~\cite{Beau2026a21,Beau2026a22,Beau2026a23} before the rank
-  is computed; the rank itself is not invariant under a rescaling of
+  O19~\cite{Beau2026a23}, which would quotient a residual amplitude factor
+  $r(c,q)$ before the rank is computed; the reported values $r(c,q) \in \{1,2,3,4\}$ are a
+  historical hypothesis, and on the real O12/O13 pipeline O16's conjugate-block identity
+  forces $r(c,q) \equiv 1$ within O16's contract~\cite{Beau2026a20}; the rank itself is not invariant under a rescaling of
   the observable (Remark~\ref{rem:invariance}).
 
   The key conceptual step is then to interpret saturation not
@@ -183,10 +183,10 @@
   result of this paper.
 
   The criterion constructed here uses only observed values.
-  It is defined for the canonical normalisation proposed in O19,
-  whose pipeline independence (O19 Proposition~7.2) is stated there
-  with a proof sketch conditional on the outcome of its tests, and it
-  is not invariant under a rescaling of the observable.
+  It is defined for a fixed normalisation; O19 proposes a canonical one, whose
+  independence tests are open and whose pipeline independence is not established
+  (O19 Open Problem~7.2), and the rank is not invariant under a rescaling of the
+  observable.
   It provides a fibre-side ingredient, free of fitted parameters, for the
   candidate $\delta_{\mathrm{pair}} \to \beta^*$ pathway.
   It does not derive the growth-equation side of that pathway
@@ -236,9 +236,10 @@
     action as a covariance of the response family and states the identification of
     $\{c, q-c\}$ with a fibre of $\Pi$ as an open problem; the pairing
     keeps the status of a structurally motivated hypothesis.
-    O19~\cite{Beau2026a23} constructed the canonical observable
-    $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$, eliminating the
-    residual amplitude factor $r(c,q) \in \{1,2,3,4\}$.
+    O19~\cite{Beau2026a23} proposed a case-dependent canonical observable
+    $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ intended to eliminate a residual amplitude
+    factor $r(c,q)$, whose reported values $\{1,2,3,4\}$ are a historical hypothesis; its
+    independence tests are open.
 
     \begin{remark}[Observable was mis-identified, not mis-measured]
       \label{rem:mis-identified-background}
@@ -382,17 +383,12 @@
         of the observable and of the threshold $9/q^2$; it depends on
         the absolute normalisation of the observable, not only on the
         \emph{shape} of the decay.
-        In particular, $n_3^{\mathrm{obs}}$ does not itself remove the
-        pipeline normalisation factor $r(c,q) \in \{1,2,3,4\}$
-        identified in
-        O17--O19~\cite{Beau2026a21,Beau2026a22,Beau2026a23}: applied to
-        $\sigma_{\mathrm{pair}}$ rather than to
-        $\sigma_{\mathrm{pair}}^{\mathrm{can}}$, a factor $r=4$ would
-        multiply the rank by $4^{1/\delta}\approx 1.20$ for
-        $\delta\approx 7.5$, a $20\,\%$ shift of the rank.
-        The rank is meaningful for the canonical normalisation of
-        O19~\cite{Beau2026a23}, which quotients that factor before the
-        rank is formed.
+        In particular, $n_3^{\mathrm{obs}}$ does not itself remove a
+        pipeline normalisation factor $r(c,q)$, such as the historically reported
+        $r(c,q) \in \{1,2,3,4\}$: a factor $r=4$ would multiply the rank by
+        $4^{1/\delta}\approx 1.20$ for $\delta\approx 7.5$, a $20\,\%$ shift of the rank.
+        The rank is therefore meaningful only for a fixed normalisation; O19~\cite{Beau2026a23}
+        proposes a canonical one, whose independence tests are open.
         The invariance under global rescaling stated in earlier
         versions is withdrawn.
       \end{remark}
@@ -463,8 +459,8 @@
     The threshold $9/q^2$ is therefore the normalised product of
     the two fibre-level cumulative spans at the
     three-dimensional saturation point.
-    This identification uses the canonical normalisation of
-    O19 ($\sigma_c = \Sigma^{(c)}/q$ with the amplitude factor
+    This identification uses the canonical normalisation proposed in
+    O19 ($\sigma_c = \Sigma^{(c)}/q$ with any amplitude factor
     quotiented); it inherits whatever basis dependence the
     cumulative spans retain (O19 Lemma~2.4).
     It also takes $\sigma_c$ to be a normalised cumulative span, which is
@@ -572,7 +568,7 @@
     $n_3^{\mathrm{obs}}$ for all conjugate pairs with
     $\delta_{\mathrm{pair}}$ in the historical range $[7.4,10.6]$ across
     $q \in \{101, 151, 211\}$, using the canonical pair
-    observable of O19~\cite{Beau2026a23}.
+    observable proposed in O19~\cite{Beau2026a23}, once its open tests are settled.
 
   \section{The Legacy $\delta_{\mathrm{pair}} \to \beta^*$
   Diagnostic and the Withdrawn Transfer Claim}
@@ -694,7 +690,8 @@
   the saturation rank $n_3^{\mathrm{obs}}$, which depends only
   on directly measurable values of the observable.
   It is not invariant under a rescaling of the observable and is
-  defined for the canonical normalisation of O19.
+  defined for a fixed normalisation, such as the canonical one proposed in O19, whose
+  tests are open.
   Under the shell-alignment conjecture, this rank acquires a
   discrete geometric interpretation as a BFS shell depth in
   $\mathrm{Cay}(G_q, S_q)$, providing a well-defined saturation
