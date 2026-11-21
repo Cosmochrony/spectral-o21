@@ -389,8 +389,7 @@
         $\sigma_{\mathrm{pair}}$ rather than to
         $\sigma_{\mathrm{pair}}^{\mathrm{can}}$, a factor $r=4$ would
         multiply the rank by $4^{1/\delta}\approx 1.20$ for
-        $\delta\approx 7.5$, about one shell at
-        $n_3^{\mathrm{obs}}\approx 4.8$.
+        $\delta\approx 7.5$, a $20\,\%$ shift of the rank.
         The rank is meaningful for the canonical normalisation of
         O19~\cite{Beau2026a23}, which quotients that factor before the
         rank is formed.
@@ -468,6 +467,16 @@
     O19 ($\sigma_c = \Sigma^{(c)}/q$ with the amplitude factor
     quotiented); it inherits whatever basis dependence the
     cumulative spans retain (O19 Lemma~2.4).
+    It also takes $\sigma_c$ to be a normalised cumulative span, which is
+    non-decreasing in $n$, whereas the power-law regime used to define
+    $n_3^{\mathrm{obs}}$ requires $\sigma_{\mathrm{pair}}$ to decrease; the
+    two readings cannot describe the same observable.
+    On the O25 data used in Table~\ref{tab:n3obs}, where $\sigma_c(n)$ is the
+    new rank in shell $n$ divided by $|S_n|$, the cumulative spans already
+    exceed $23$ at $n=0$, so the condition $\Sigma_c(n_3)=3$ is not met at any
+    shell.
+    The threshold $9/q^2$ is therefore a supplied input whose relation to the
+    computed observable is not established.
     Reading the integer $3$ as a number of physically stable
     directions selected by the projection $\Pi$ in the Weil
     realisation of $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ is an
@@ -497,54 +506,58 @@
 
     \begin{table}[ht]
       \centering
-      \begin{tabular}{cccccc}
+      \small
+      \setlength{\tabcolsep}{4pt}
+      \begin{tabular}{lcccccc}
         \hline
-        $q$ & $(c,\,q-c)$ & $\delta_{\mathrm{pair}}$ & $R^2$ &
+        Source & $q$ & $(c,\,q-c)$ & $\delta_{\mathrm{pair}}$ & $R^2$ &
         $n_3^{\mathrm{obs}}$ &
         $\mathrm{dist}(n_3^{\mathrm{obs}}, \mathbb{Z})$ \\
         \hline
-        61 & $(1,\,60)$ & 7.512 & 1.0000 & 4.80 & 0.20 \\
+        Printed in v.~$\leq1.2$ & 61 & $(1,\,60)$ & 7.512 & 1.0000 & 4.80 & 0.20 \\
+        O25 data, $\log n$ & 61 & $(1,\,60)$ & 9.22 & 0.984 & 3.51 & 0.50 \\
+        O25 data, $\log(n+1)$ & 61 & $(1,\,60)$ & 11.79 & 0.992 & 3.51 & 0.50 \\
         \hline
       \end{tabular}
-      \caption{Observable saturation rank for available pairs selected by the historical comparison range
-        $\delta_{\mathrm{pair}} \in [7.4, 10.6]$.
-        $n_3^{\mathrm{obs}}$ is computed from
-        Definition~\ref{def:n3obs} with $(n_0, n_1) = (2, 7)$,
-        the pre-saturation window of~\cite{Beau2026a17}.
-        The distance to the nearest BFS shell depth provides a
-        direct test of Conjecture~\ref{conj:shell-saturation}.}
+      \caption{Observable saturation rank at $q=61$ for the pair $(1,60)$, with $(n_0, n_1) = (2, 7)$, the
+        pre-saturation window of~\cite{Beau2026a17}.
+        The first row is the value printed in earlier versions; no surviving code or data reproduces it.
+        The other rows are recomputed from the O25 campaign output for $q=61$ (seed 42, $50$ block samples
+        per pair; script \texttt{code/table1\_recompute.py}), whose pair observable is the mean of
+        $\sigma_c\sigma_{q-c}$ with $\sigma_c(n)$ the new Gram--Schmidt rank in shell $n$ divided by $|S_n|$.
+        That is not the canonical observable $\sigma_{\mathrm{pair}}^{\mathrm{can}}$, whose instance factor
+        cannot be reconstructed from the stored data.
+        The exponent column depends on the fitting convention; $n_3^{\mathrm{obs}}$ does not, since
+        Definition~\ref{def:n3obs} uses only $\log(n_1/n_0)$.}
       \label{tab:n3obs}
     \end{table}
 
-    At integer shells, the threshold $9/q^2$ is bracketed as:
+    On the recomputed data, the threshold is crossed between shells $3$ and $4$:
     \[
-      q^2\,\sigma_{\mathrm{pair}}^{\mathrm{can}}(4) \approx 6.64,
+      q^2\,\sigma_{\mathrm{pair}}(3) \approx 91.6,
       \qquad
-      q^2\,\sigma_{\mathrm{pair}}^{\mathrm{can}}(5) \approx 1.66,
+      q^2\,\sigma_{\mathrm{pair}}(4) \approx 8.01,
     \]
-    showing that $n_3^{\mathrm{obs}} \approx 4.80$ lies strictly
-    between two consecutive shells.
+    consistent with $n_3^{\mathrm{obs}}(2,7) \approx 3.51$.
+    The bracket printed in earlier versions, $q^2\sigma(4)\approx6.64$ and $q^2\sigma(5)\approx1.66$, placed
+    both values below $9$ and therefore did not bracket the reported crossing at $4.80$; it is withdrawn
+    with the first row of Table~\ref{tab:n3obs}.
+    The recomputed rank is also not stable under a change of reference shells
+    ($n_3^{\mathrm{obs}} \approx 3.86, 3.68, 3.75$ for $(n_0,n_1) = (2,5), (2,6), (3,7)$), so by
+    Proposition~\ref{prop:local-consistency} the window is not an exact power-law regime.
 
-    The value $\mathrm{dist}(n_3^{\mathrm{obs}}, \mathbb{Z})
-  \approx 0.20$ is intermediate: it does not indicate exact
-    alignment, but is also significantly below maximal
-    misalignment ($0.5$).
+    The recomputed distance $\approx 0.50$ is the maximal value, but it is obtained for an observable that
+    is not the canonical one, and $n_3^{\mathrm{obs}}$ depends on the normalisation
+    (Remark~\ref{rem:invariance}).
+    The available data therefore provide no evidence for the conjecture and do not test it for the
+    canonical observable.
 
-    Two scenarios are distinguishable by further data.
     The conjecture predicts not that any individual pair has
     $\mathrm{dist}(n_3^{\mathrm{obs}}, \mathbb{Z}) = 0$
     exactly, but that the \emph{distribution} of distances
     across physically admissible pairs concentrates near $0$,
     in contrast to a uniform distribution on $[0, \tfrac{1}{2}]$
     expected under the null hypothesis.
-    In the \emph{alignment scenario}, this concentration becomes
-    statistically significant as the dataset grows in $q$ and in
-    the number of pairs.
-    In the \emph{non-alignment scenario}, the distribution
-    remains uniform, falsifying the conjecture.
-    The single available data point
-    ($\mathrm{dist} \approx 0.20$ for $q=61$) is consistent with
-    both scenarios and does not discriminate between them.
 
     A decisive test requires computing
     $n_3^{\mathrm{obs}}$ for all conjugate pairs with
