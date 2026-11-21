@@ -9,7 +9,7 @@ The abstract no longer states that the programme has identified the pair observa
 quantity for the lepton mass hierarchy: no result of O16–O21 establishes that link, which remains an
 open research motivation. The threshold $\Sigma_c(n_3)=3$ is a supplied selection rule (**O24**);
 its reading as three physically stable directions is an interpretive hypothesis. The $q=61$ value of
-Table 1 is withdrawn as not reproducible and replaced by a traceable recomputation (see below).
+Table 1 is withdrawn: Definition 3.1 does not give it from its own data (see below).
 
 **Version 1.2** withdrew the former cross-substrate transfer theorem and retained its numerical evaluation
 only as a defined legacy diagnostic.
@@ -55,11 +55,13 @@ supplied, not derived.
 The paper conjectures that a conjugate pair is physically admissible if and only if
 $n_3^{\mathrm{obs}}$ lies close to a BFS shell of $\mathrm{Cay}(G_q,S_q)$ (Conjecture 4.1).
 Version 1.3 withdraws the single data point printed earlier ($q=61$, $(c,q-c)=(1,60)$,
-$n_3^{\mathrm{obs}}\approx4.80$, distance $0.20$): no surviving code or data reproduces it, and its
-bracket $q^2\sigma(4)\approx6.64$, $q^2\sigma(5)\approx1.66$ did not bracket the threshold $9$.
-Recomputed from the traceable O25 output (`code/table1_recompute.py`), the same pair and window give
-$n_3^{\mathrm{obs}}\approx3.51$ (distance $\approx0.50$, crossing between shells 3 and 4), for an
-observable that is not the canonical one. The data provide no evidence for the conjecture and do not
+$n_3^{\mathrm{obs}}\approx4.80$, distance $0.20$). Its source, the O12 $q=61$ output kept in the O14
+repository, reproduces the printed exponent $7.512$, $R^2$ and bracket $q^2\sigma(4)\approx6.64$,
+$q^2\sigma(5)\approx1.66$, but both bracket values lie below $9$: Definition 3.1 gives
+$n_3^{\mathrm{obs}}\approx3.65$ (distance $\approx0.35$, crossing between shells 3 and 4). The printed
+$4.80$ coincides with the O12 block exponent $\hat\delta\approx4.80$ stored in the same file. The O25
+campaign output gives $n_3^{\mathrm{obs}}\approx3.51$ (distance $\approx0.50$). Both observables are
+non-canonical (`code/table1_recompute.py`). The data provide no evidence for the conjecture and do not
 test it for the canonical observable.
 
 ## Withdrawn transfer theorem and legacy diagnostic

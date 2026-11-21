@@ -471,10 +471,12 @@
     non-decreasing in $n$, whereas the power-law regime used to define
     $n_3^{\mathrm{obs}}$ requires $\sigma_{\mathrm{pair}}$ to decrease; the
     two readings cannot describe the same observable.
-    On the O25 data used in Table~\ref{tab:n3obs}, where $\sigma_c(n)$ is the
-    new rank in shell $n$ divided by $|S_n|$, the cumulative spans already
-    exceed $23$ at $n=0$, so the condition $\Sigma_c(n_3)=3$ is not met at any
-    shell.
+    For the observable of Table~\ref{tab:n3obs}, where $\sigma_c(n)$ is the new
+    rank in shell $n$ divided by $|S_n|$, the cumulative count
+    $\sum_{m\le n}|S_m|\,\sigma_c(m)$ is already $\approx 23.8$ at $n=0$ in the
+    O25 sample mean (and at least $17$ for the single O12 blocks), so it never
+    equals $3$; this count is not the span rank $\Sigma^{(c)}$ of O19, which
+    starts at $1$.
     The threshold $9/q^2$ is therefore a supplied input whose relation to the
     computed observable is not established.
     Reading the integer $3$ as a number of physically stable
@@ -508,46 +510,54 @@
       \centering
       \small
       \setlength{\tabcolsep}{4pt}
-      \begin{tabular}{lcccccc}
+      \begin{tabular}{lcccc}
         \hline
-        Source & $q$ & $(c,\,q-c)$ & $\delta_{\mathrm{pair}}$ & $R^2$ &
+        Source & $\delta_{\mathrm{pair}}$ & $R^2$ &
         $n_3^{\mathrm{obs}}$ &
         $\mathrm{dist}(n_3^{\mathrm{obs}}, \mathbb{Z})$ \\
         \hline
-        Printed in v.~$\leq1.2$ & 61 & $(1,\,60)$ & 7.512 & 1.0000 & 4.80 & 0.20 \\
-        O25 data, $\log n$ & 61 & $(1,\,60)$ & 9.22 & 0.984 & 3.51 & 0.50 \\
-        O25 data, $\log(n+1)$ & 61 & $(1,\,60)$ & 11.79 & 0.992 & 3.51 & 0.50 \\
+        Printed in v.~$\leq1.2$ & 7.512 & 1.0000 & 4.80 & 0.20 \\
+        O12 output, one block pair & 7.512 & 1.0000 & 3.65 & 0.35 \\
+        O25 output, mean of 50 pairs & 11.79 & 0.992 & 3.51 & 0.50 \\
         \hline
       \end{tabular}
       \caption{Observable saturation rank at $q=61$ for the pair $(1,60)$, with $(n_0, n_1) = (2, 7)$, the
-        pre-saturation window of~\cite{Beau2026a17}.
-        The first row is the value printed in earlier versions; no surviving code or data reproduces it.
-        The other rows are recomputed from the O25 campaign output for $q=61$ (seed 42, $50$ block samples
-        per pair; script \texttt{code/table1\_recompute.py}), whose pair observable is the mean of
-        $\sigma_c\sigma_{q-c}$ with $\sigma_c(n)$ the new Gram--Schmidt rank in shell $n$ divided by $|S_n|$.
-        That is not the canonical observable $\sigma_{\mathrm{pair}}^{\mathrm{can}}$, whose instance factor
-        cannot be reconstructed from the stored data.
-        The exponent column depends on the fitting convention; $n_3^{\mathrm{obs}}$ does not, since
-        Definition~\ref{def:n3obs} uses only $\log(n_1/n_0)$.}
+        pre-saturation window of~\cite{Beau2026a17}; $\delta_{\mathrm{pair}}$ and $R^2$ are fitted against
+        $\log(n+1)$ on that window.
+        The O12 output is the $q=61$ file of the O12 pipeline (seed 0, $15$ blocks), which contains the one
+        conjugate block pair $(1,27,2)$, $(60,3,30)$ used for the earlier row; it reproduces that row's
+        exponent and $R^2$, but Definition~\ref{def:n3obs} applied to it gives $3.65$, not $4.80$.
+        The O25 output is the $q=61$ campaign file (seed 42, $50$ block samples per pair).
+        Script: \texttt{code/table1\_recompute.py}.
+        In both files $\sigma_c(n)$ is the new Gram--Schmidt rank in shell $n$ divided by $|S_n|$, and the pair
+        observable is $\sigma_c\sigma_{q-c}$; neither is the canonical observable
+        $\sigma_{\mathrm{pair}}^{\mathrm{can}}$, whose instance factor is not stored.
+        $n_3^{\mathrm{obs}}$ does not depend on the fitting convention, since Definition~\ref{def:n3obs} uses
+        only $\log(n_1/n_0)$.}
       \label{tab:n3obs}
     \end{table}
 
-    On the recomputed data, the threshold is crossed between shells $3$ and $4$:
+    On the O12 data the bracket printed in earlier versions is reproduced at shells $4$ and $5$,
     \[
-      q^2\,\sigma_{\mathrm{pair}}(3) \approx 91.6,
+      q^2\,\sigma_{\mathrm{pair}}(4) \approx 6.64,
       \qquad
-      q^2\,\sigma_{\mathrm{pair}}(4) \approx 8.01,
+      q^2\,\sigma_{\mathrm{pair}}(5) \approx 1.66,
     \]
-    consistent with $n_3^{\mathrm{obs}}(2,7) \approx 3.51$.
-    The bracket printed in earlier versions, $q^2\sigma(4)\approx6.64$ and $q^2\sigma(5)\approx1.66$, placed
-    both values below $9$ and therefore did not bracket the reported crossing at $4.80$; it is withdrawn
-    with the first row of Table~\ref{tab:n3obs}.
-    The recomputed rank is also not stable under a change of reference shells
-    ($n_3^{\mathrm{obs}} \approx 3.86, 3.68, 3.75$ for $(n_0,n_1) = (2,5), (2,6), (3,7)$), so by
+    but both values lie below $9$: the threshold is crossed between shells $3$ and $4$
+    ($q^2\sigma_{\mathrm{pair}}(3)\approx34.5$), consistent with $n_3^{\mathrm{obs}}(2,7)\approx3.65$.
+    The printed rank $4.80$ is therefore not obtained from its own data; it coincides numerically with the
+    O12 block exponent $\hat\delta \approx 4.80$ stored in the same file.
+    The printed rank and distance are withdrawn.
+    On the O25 data the crossing also lies between shells $3$ and $4$
+    ($q^2\sigma_{\mathrm{pair}}(3)\approx91.6$, $q^2\sigma_{\mathrm{pair}}(4)\approx8.01$).
+    Neither rank is stable under a change of reference shells ($3.72, 3.67, 3.74$ on the O12 data and
+    $3.86, 3.68, 3.75$ on the O25 data for $(n_0,n_1) = (2,5), (2,6), (3,7)$), so by
     Proposition~\ref{prop:local-consistency} the window is not an exact power-law regime.
+    On the O25 data the pair has $\delta_{\mathrm{pair}} \approx 11.8$, outside the historical comparison
+    range.
 
-    The recomputed distance $\approx 0.50$ is the maximal value, but it is obtained for an observable that
-    is not the canonical one, and $n_3^{\mathrm{obs}}$ depends on the normalisation
+    The recomputed distances, $\approx 0.35$ and close to the maximal value $0.5$, are obtained for
+    observables that are not the canonical one, and $n_3^{\mathrm{obs}}$ depends on the normalisation
     (Remark~\ref{rem:invariance}).
     The available data therefore provide no evidence for the conjecture and do not test it for the
     canonical observable.
