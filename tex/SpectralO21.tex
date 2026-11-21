@@ -34,18 +34,20 @@
   \large O21 --- Spectral Admissibility Sub-programme}
 \author{J.~Beau\\[0.5ex]
 \small Independent Researcher}
-\date{2026\\Version 1.2}
+\date{2026\\Version 1.3}
 
 \begin{document}
 
   \maketitle
 
   \begin{abstract}
-    The spectral admissibility sub-programme of Cosmochrony has
-    identified the canonical fibre-level observable
-    $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ as the relevant
-    quantity for the lepton mass hierarchy.
-    However, existing saturation criteria rely on the power-law
+    The spectral admissibility sub-programme of Cosmochrony studies the
+    canonical fibre-level observable
+    $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$, historically motivated by a
+    comparison with the lepton mass hierarchy.
+    No result of the programme links this observable to the physical mass
+    hierarchy; that link remains an open research motivation.
+    Existing saturation criteria rely on the power-law
     fit $\sigma(n) \sim C\,n^{-\delta}$, whose amplitude $C$ and
     exponent $\delta$ depend on the fitting window and are not
     intrinsic.
@@ -54,9 +56,13 @@
     $n_3^{\mathrm{obs}}(n_0, n_1, q)$ by eliminating both $C$
     and $\delta$ using two local measurements of
     $\sigma_{\mathrm{pair}}^{\mathrm{can}}$.
-    This rank is invariant under global rescaling and all
-    pipeline-dependent normalisations, and depends only on
-    directly measurable quantities.
+    This rank contains no fitted parameter and depends only on
+    directly measurable quantities, but it is not normalisation-free:
+    under a global rescaling $\sigma \mapsto \lambda\sigma$ its exponent
+    is unchanged while the threshold base is not, so the rank scales as
+    $\lambda^{1/\delta}$.
+    It is defined relative to the canonical normalisation of the
+    pair observable.
 
     We conjecture that physical admissibility requires
     $n_3^{\mathrm{obs}}$ to align with a BFS shell of the Cayley
@@ -69,8 +75,10 @@
     The fibre construction does not supply a native Heisenberg
     growth equation carrying the pair observable.
 
-    O22 and O24 discharge the shell-alignment and rank-three
-    conditions on the fibre side of the chain.
+    O22 addresses the shell-alignment condition, and O24 shows,
+    conditional on a supplied carrier, that the rank-three threshold is
+    insensitive to fibre cardinality; the threshold itself remains a
+    supplied selection rule.
     Those results do not supply the independent Heisenberg
     growth carrier required by the capacity-to-rate step.
     \textbf{Interpretive outlook.}
@@ -133,11 +141,13 @@
   $n_0$ and $n_1$, one can eliminate both $C$ and
   $\delta_{\mathrm{pair}}$ simultaneously, producing a fully
   observable saturation rank $n_3^{\mathrm{obs}}(n_0, n_1, q)$
-  that is invariant under all pipeline-dependent
-  transformations identified in
-  O17--O19~\cite{Beau2026a21,Beau2026a22,Beau2026a23}
-  and, in particular, under the amplitude artefact
-  $r(c,q) \in \{1,2,3,4\}$.
+  that contains no fitted parameter.
+  The rank is formed from the canonical observable of
+  O19~\cite{Beau2026a23}, which quotients the amplitude artefact
+  $r(c,q) \in \{1,2,3,4\}$ identified in
+  O17--O19~\cite{Beau2026a21,Beau2026a22,Beau2026a23} before the rank
+  is computed; the rank itself is not invariant under a rescaling of
+  the observable (Remark~\ref{rem:invariance}).
 
   The key conceptual step is then to interpret saturation not
   as the attainment of a numerical threshold in a continuous
@@ -150,22 +160,27 @@
   (Conjecture~\ref{conj:shell-saturation}).
 
   This reformulation has three structural consequences.
-  First, it removes all free parameters from the admissibility
+  First, it removes the fitted parameters from the admissibility
   criterion, making it directly testable across primes and
-  pairs without pipeline recalibration.
+  pairs once the normalisation of the observable is fixed; its
+  remaining inputs are that normalisation, the reference shells and
+  the threshold $9/q^2$.
   Second, it reveals a resonance condition between two a priori
   independent structures: the continuous power-law decay
   induced by Weil representation dynamics and the discrete
   shell geometry of the Heisenberg Cayley graph.
-  Third, it provides a structural interpretation of the
-  threshold $9 = 3^2$ as the normalised product of the
-  fibre-level cumulative spans at the three-dimensional
-  saturation point, connecting the admissibility condition to
-  the emergence of three physically stable directions under
-  the non-injective projection~$\Pi$.
+  Third, it rewrites the threshold $9 = 3^2$ as the normalised
+  product of the two fibre-level cumulative spans at a saturation
+  point where both spans equal three.
+  That value is a supplied selection rule~\cite{Beau2026a28}; reading
+  it as three physically stable directions selected by the
+  non-injective projection~$\Pi$ is an interpretive hypothesis, not a
+  result of this paper.
 
-  The criterion constructed here is intrinsic, observable, and
-  independent of representation choices.
+  The criterion constructed here uses only observed values and
+  inherits the basis independence of the canonical observable of
+  O19; it is defined for that normalisation and is not invariant
+  under a rescaling of the observable.
   It provides an intrinsic fibre-side ingredient for the
   candidate $\delta_{\mathrm{pair}} \to \beta^*$ pathway.
   It does not derive the growth-equation side of that pathway
@@ -345,19 +360,36 @@
         The converse follows immediately.
       \end{proof}
 
-      \begin{remark}[Invariance under global rescaling]
+      \begin{remark}[Behaviour under global rescaling]
         \label{rem:invariance}
-        $n_3^{\mathrm{obs}}$ is invariant under $\sigma \mapsto
-        \lambda \sigma$ for any constant $\lambda > 0$: the
-        exponent in Definition~\ref{def:n3obs} uses only the ratio
-        $\sigma(n_0)/\sigma(n_1)$, which is unaffected by a global
-        multiplicative factor.
-        In particular, $n_3^{\mathrm{obs}}$ is independent of the
+        Let $\sigma \mapsto \lambda \sigma$ for a constant
+        $\lambda > 0$.
+        The exponent in Definition~\ref{def:n3obs} uses only the
+        ratio $\sigma(n_0)/\sigma(n_1)$, so the local exponent
+        $\delta(n_0,n_1)$ is unchanged.
+        The base $q^2\sigma(n_0)/9$ is multiplied by $\lambda$, hence
+        \[
+          n_3^{\mathrm{obs}} \;\longmapsto\;
+          \lambda^{1/\delta(n_0,n_1)}\, n_3^{\mathrm{obs}} .
+        \]
+        The rank is therefore invariant only under a joint rescaling
+        of the observable and of the threshold $9/q^2$; it depends on
+        the absolute normalisation of the observable, not only on the
+        \emph{shape} of the decay.
+        In particular, $n_3^{\mathrm{obs}}$ does not itself remove the
         pipeline normalisation factor $r(c,q) \in \{1,2,3,4\}$
         identified in
-        O17--O19~\cite{Beau2026a21,Beau2026a22,Beau2026a23}.
-        The criterion therefore depends only on the \emph{shape} of
-        the decay, not on its absolute normalisation.
+        O17--O19~\cite{Beau2026a21,Beau2026a22,Beau2026a23}: applied to
+        $\sigma_{\mathrm{pair}}$ rather than to
+        $\sigma_{\mathrm{pair}}^{\mathrm{can}}$, a factor $r=4$ would
+        multiply the rank by $4^{1/\delta}\approx 1.20$ for
+        $\delta\approx 7.5$, about one shell at
+        $n_3^{\mathrm{obs}}\approx 4.8$.
+        The rank is meaningful for the canonical normalisation of
+        O19~\cite{Beau2026a23}, which quotients that factor before the
+        rank is formed.
+        The invariance under global rescaling stated in earlier
+        versions is withdrawn.
       \end{remark}
 
   \section{The Shell-Alignment Conjecture}
@@ -411,8 +443,9 @@
 
   \begin{remark}[The origin of the threshold $9 = 3^2$]
     \label{rem:origin-9}
-    The number $9 = 3^2$ in Definition~\ref{def:n3obs} is not
-    an external input.
+    The number $9 = 3^2$ in Definition~\ref{def:n3obs} follows
+    from the selection rule $\Sigma_c(n_3) = \Sigma_{q-c}(n_3) = 3$,
+    which is itself a supplied input~\cite{Beau2026a28}.
     If $\Sigma_c(n_3) = \Sigma_{q-c}(n_3) = 3$ at the
     saturation shell, then
     \[
@@ -427,9 +460,10 @@
     three-dimensional saturation point.
     This identification is independent of any basis choice,
     as it involves only cumulative span dimensions.
-    The integer $3$ reflects the number of physically stable
+    Reading the integer $3$ as a number of physically stable
     directions selected by the projection $\Pi$ in the Weil
-    realisation of $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$;
+    realisation of $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ is an
+    interpretive hypothesis;
     whether $\Sigma_c(n_3) = 3$ is a derived consequence of the
     Born--Infeld structure or an independent arithmetic property
     of the Weil representation is an open problem.
@@ -609,9 +643,11 @@
     O15 showed that the transfer $\delta \to \beta^*$ fails at
     the block level: no aggregation of block data recovers the
     fibre-level exponent.
-    The present paper resolves the amplitude-dependent
-    saturation criterion by defining $n_3^{\mathrm{obs}}$
-    intrinsically at the fibre level.
+    The present paper replaces the fitted amplitude and exponent
+    of the saturation criterion by two observed values at the
+    fibre level; the resulting $n_3^{\mathrm{obs}}$ still depends
+    on the normalisation of the observable
+    (Remark~\ref{rem:invariance}).
     It does not resolve the separate growth-equation obstruction:
     no native process carrying
     $\sigma_{\mathrm{pair}}^{\mathrm{can}}$ is derived.
@@ -619,34 +655,38 @@
   \section{Conclusion}
   \label{sec:conclusion}
 
-  This paper establishes a fully observable and intrinsic
-  criterion for fibre-level admissibility in the spectral
-  programme of Cosmochrony.
-  By eliminating both the amplitude and the exponent from the
-  power-law description of
+  This paper establishes a fully observable criterion, free of
+  fitted parameters, for fibre-level admissibility in the
+  spectral programme of Cosmochrony.
+  By eliminating both the fitted amplitude and the fitted exponent
+  from the power-law description of
   $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$, we constructed
   the saturation rank $n_3^{\mathrm{obs}}$, which depends only
-  on directly measurable values of the observable and is
-  invariant under all pipeline-dependent normalisations.
+  on directly measurable values of the observable.
+  It is not invariant under a rescaling of the observable and is
+  defined for the canonical normalisation of O19.
   Under the shell-alignment conjecture, this rank acquires a
   discrete geometric interpretation as a BFS shell depth in
-  $\mathrm{Cay}(G_q, S_q)$, providing a well-defined and
-  scale-independent saturation event.
+  $\mathrm{Cay}(G_q, S_q)$, providing a well-defined saturation
+  event for that normalisation.
   The former transfer theorem is withdrawn: the additional cross-substrate identification
   does not repair the reciprocal equality refuted by O6's countermodel.
   The defined legacy image $\beta^*_{\mathrm{presc}}\approx0.126$ is a numerical comparison
   for a supplied exponent, not a consequence of shell alignment or a determination of $\beta^*$.
   The native Heisenberg transfer obstruction remains separate~\cite{Beau2026sgn}.
 
-  The construction resolves the intrinsic-definition problem
-  for the fibre saturation rank.
+  The construction removes the fitted parameters from the fibre
+  saturation rank.
+  It does not remove the dependence of that rank on the
+  normalisation of the observable, so the intrinsic-definition
+  problem is resolved only for a fixed normalisation.
   It leaves the growth-equation transfer unresolved and, for the
   corpus-defined Heisenberg objects, refuted as a native
   composite.
 
-  O22 proves shell alignment, and O24 closes the rank-three
-  condition with respect to the fibre structure
-  alone~\cite{Beau2026a26,Beau2026a28}.
+  O22 proves shell alignment~\cite{Beau2026a26}, and O24 shows,
+  conditional on a supplied carrier, that the supplied rank-three
+  threshold is insensitive to fibre cardinality~\cite{Beau2026a28}.
   These fibre-side statements do not select a rate or restore the withdrawn reciprocal theorem.
   A new growth carrier and an independently justified rate-selection mechanism would be needed;
   neither follows from the crossing rank or from a transport identification alone.
