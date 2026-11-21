@@ -100,7 +100,9 @@ $6.6$--$6.9$; the comparison with $[7.4,10.6]$ is therefore convention-sensitive
 - a native growth carrier for the pair observable and an independent rate-selection law; a carrier
   identification alone does not repair the reciprocal equality refuted under O6’s premises
 
-O22 proves shell alignment; O24 relates the rank-three condition to the candidate fibre structure,
+O22 proves, under its definition of physical realisability, that a realisable Born–Infeld saturation
+depth lies on a BFS shell; it does not identify that depth with $n_3^{\mathrm{obs}}$, so the shell-alignment
+conjecture remains open. O24 relates the rank-three condition to the candidate fibre structure,
 conditionally on the supplied carrier and fibre hypotheses of O23 and O18.
 Neither result supplies the independent native growth carrier required by the capacity-to-rate step.
 

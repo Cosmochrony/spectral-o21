@@ -4,5 +4,5 @@
   "main_tex": "tex/SpectralO21.tex",
   "zenodo_id": 19358961,
   "doi": "10.5281/zenodo.19358961",
-  "notes": "Version 1.2 (alpha-1). Withdraws the reciprocal equality as a consequence of O6/O7: O6 proves only a conditional upper growth bound and supplies a countermodel to equality. The historical exponent range does not select the cascade rate. The former reciprocal-transfer theorem is withdrawn; the two-point crossing formula and recorded finite-prime observations are unchanged. Reciprocal numerical values are retained only as explicitly defined legacy diagnostics."
+  "notes": "Version 1.3. The observable saturation rank is not invariant under a global rescaling of the observable: its exponent is ratio-invariant but the threshold base is not, so it scales as lambda^(1/delta); it is defined for the canonical normalisation of O19 and the former invariance claim is withdrawn. The abstract no longer states that the programme identified the pair observable as the relevant quantity for the lepton mass hierarchy: no O-series result establishes that link. The threshold Sigma_c(n_3)=3 is a supplied selection rule (O24). The shell-alignment conjecture remains open: O22 places the Born-Infeld saturation depth on a shell but does not identify it with the O21 rank."
 }
