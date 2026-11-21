@@ -62,7 +62,7 @@
     is unchanged while the threshold base is not, so the rank scales as
     $\lambda^{1/\delta}$.
     It is defined relative to a fixed normalisation of the pair observable;
-    the canonical one proposed in O19 has open tests.
+    the canonical one proposed in O19 is not established as pipeline independent.
 
     We conjecture that physical admissibility requires
     $n_3^{\mathrm{obs}}$ to align with a BFS shell of the Cayley
@@ -184,7 +184,7 @@
 
   The criterion constructed here uses only observed values.
   It is defined for a fixed normalisation; O19 proposes a canonical one, whose
-  independence tests are open and whose pipeline independence is not established
+  own residual factor is trivial ($r(c,q)\equiv1$, O19 Lemma~2.4) and whose pipeline independence is not established
   (O19 Open Problem~7.2), and the rank is not invariant under a rescaling of the
   observable.
   It provides a fibre-side ingredient, free of fitted parameters, for the
@@ -229,18 +229,18 @@
     with exponent $\delta_{\mathrm{pair}}=2\delta_c$ when the conjugate ratio is shell-independent;
     O16 asserts no numerical value, and the historical value is near $7.44$.
     Its comparison with the historical range does not resolve the rate-selection problem.
-    O17~\cite{Beau2026a21} established the structural derivation:
-    $\delta_{q-c} = \delta_c$ follows from
-    $\rho_{q-c} = \overline{\rho_c}$ and norm-invariance of
-    Gram--Schmidt.
+    Within its toy model, O17~\cite{Beau2026a21} derived the equality of the raw
+    exponents from $\rho_{q-c} = \overline{\rho_c}$ and norm-invariance of
+    Gram--Schmidt; on the real O12/O13 pipeline, $\delta_{q-c} = \delta_c$ for the exact
+    block observable follows from O16's conjugate-block identity~\cite{Beau2026a20}.
     O18~\cite{Beau2026a22} establishes the parity of the Born--Infeld
     action as a covariance of the response family and states the identification of
     $\{c, q-c\}$ with a fibre of $\Pi$ as an open problem; the pairing
     keeps the status of a structurally motivated hypothesis.
     O19~\cite{Beau2026a23} proposed a case-dependent canonical observable
     $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ intended to eliminate a residual amplitude
-    factor $r(c,q)$, whose reported values $\{1,2,3,4\}$ are a historical hypothesis; its
-    independence tests are open.
+    factor $r(c,q)$, whose reported values $\{1,2,3,4\}$ are a historical hypothesis; for its own
+    asymptotic definition $r(c,q)\equiv1$ (O19 Lemma~2.4).
 
     \begin{remark}[Observable was mis-identified, not mis-measured]
       \label{rem:mis-identified-background}
@@ -389,7 +389,7 @@
         $r(c,q) \in \{1,2,3,4\}$: a factor $r=4$ would multiply the rank by
         $4^{1/\delta}\approx 1.20$ for $\delta\approx 7.5$, a $20\,\%$ shift of the rank.
         The rank is therefore meaningful only for a fixed normalisation; O19~\cite{Beau2026a23}
-        proposes a canonical one, whose independence tests are open.
+        proposes a canonical one, not established as pipeline independent (O19 Open Problem~7.2).
         The invariance under global rescaling stated in earlier
         versions is withdrawn.
       \end{remark}
@@ -569,7 +569,7 @@
     $n_3^{\mathrm{obs}}$ for all conjugate pairs with
     $\delta_{\mathrm{pair}}$ in the historical range $[7.4,10.6]$ across
     $q \in \{101, 151, 211\}$, using the canonical pair
-    observable proposed in O19~\cite{Beau2026a23}, once its open tests are settled.
+    observable proposed in O19~\cite{Beau2026a23}, once its pipeline independence is settled (O19 Open Problem~7.2).
 
   \section{The Legacy $\delta_{\mathrm{pair}} \to \beta^*$
   Diagnostic and the Withdrawn Transfer Claim}
@@ -659,9 +659,9 @@
     The factor $2$ in the pair exponent is structural rather than
     combinatorial: it reflects the independent and equal
     contribution of the two conjugate blocks to the pair-level
-    capacity, established by $\delta_{q-c} = \delta_c$
-    (O17 Theorem~2.1~\cite{Beau2026a21}, recalled in O18
-    Theorem~3.1~\cite{Beau2026a22}).
+    capacity, established by $\delta_{q-c} = \delta_c$ (on the real pipeline from O16's
+    conjugate-block identity~\cite{Beau2026a20}; in O17's toy model from O17
+    Theorem~2.1~\cite{Beau2026a21}, recalled in O18 Theorem~3.1~\cite{Beau2026a22}).
     This exact doubling does not by itself justify inserting
     $\delta_{\mathrm{pair}}$ into the O7 growth equation.
 
@@ -692,7 +692,7 @@
   on directly measurable values of the observable.
   It is not invariant under a rescaling of the observable and is
   defined for a fixed normalisation, such as the canonical one proposed in O19, whose
-  tests are open.
+  pipeline independence is not established.
   Under the shell-alignment conjecture, this rank acquires a
   discrete geometric interpretation as a BFS shell depth in
   $\mathrm{Cay}(G_q, S_q)$, providing a well-defined saturation

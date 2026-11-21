@@ -2,7 +2,7 @@ This repository contains the source of the **O21 Cosmochrony paper**
 *Shell-Level Saturation and the Conditional Fibre-to-Rate Prescription*.
 
 **Version 1.3.1.** Follows O19 1.3: the canonical normalisation of O19 is a case-dependent proposal
-whose independence tests are open (its former Proposition 7.2 is now Open Problem 7.2), and the values
+whose own residual factor is trivial ($r\equiv1$, Lemma 2.4; its former Proposition 7.2 is now Open Problem 7.2), and the values
 $r(c,q)\in\{1,2,3,4\}$ are a historical hypothesis (on the real pipeline O16 gives $r\equiv1$ within its
 contract). The rank is described as defined for a fixed normalisation; no result of 1.3 changes.
 
@@ -48,7 +48,7 @@ $n_3^{\mathrm{obs}}(n_0,n_1,q)=n_0\left(\frac{q^2\,\sigma(n_0)}{9}\right)^{\log(
   its variation with $(n_0,n_1)$ measures departures from that regime.
 - It is **not** invariant under $\sigma\mapsto\lambda\sigma$: it scales as $\lambda^{1/\delta}$
   (Remark 3.3). It therefore depends on the normalisation of the observable and is meaningful for the
-  canonical normalisation proposed in **O19** (open tests), which would quotient any amplitude factor $r(c,q)$
+  canonical normalisation proposed in **O19** (not established as pipeline independent), which would quotient any amplitude factor $r(c,q)$
   before the rank is formed.
 - Its remaining inputs are that normalisation, the reference shells and the threshold $9/q^2$.
 
@@ -84,7 +84,7 @@ The native Heisenberg obstruction remains independent: no pair-capacity growth c
 
 ### Inputs
 
-- canonical observable and normalisation proposed in **O19** (open tests, Open Problem 7.2)
+- canonical observable and normalisation proposed in **O19** (not established as pipeline independent, Open Problem 7.2)
 - Born–Infeld parity equivariance of **O18** (the fibre identification is an open problem there)
 - power-law decay regime
 - the supplied selection rule $\Sigma_c(n_3)=3$
@@ -124,7 +124,7 @@ Neither result supplies the independent native growth carrier required by the ca
 - **O17**: pair dynamics derived
 - **O18**: Born–Infeld parity established as a covariance of the response family; the fibre identification
   stated as an open problem
-- **O19**: canonical amplitude normalisation proposed, with open tests
+- **O19**: canonical amplitude normalisation proposed, not established as pipeline independent
 - **O20**: persistence criterion (conditional)
 - **O21**: crossing rank free of fitted parameters, for a fixed normalisation
 
