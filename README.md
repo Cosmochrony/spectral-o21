@@ -9,7 +9,7 @@ contract). The rank is described as defined for a fixed normalisation; no result
 **Version 1.3.** Corrects two statements of earlier versions.
 The observable saturation rank is not invariant under a global rescaling of the observable: its exponent
 is ratio-invariant, but the threshold base is not, so the rank scales as $\lambda^{1/\delta}$ under
-$\sigma\mapsto\lambda\sigma$. It is defined for a fixed normalisation; the canonical one proposed in **O19** has open tests.
+$\sigma\mapsto\lambda\sigma$. It is defined for the canonical normalisation of **O19**.
 The abstract no longer states that the programme has identified the pair observable as the relevant
 quantity for the lepton mass hierarchy: no result of O16–O21 establishes that link, which remains an
 open research motivation. The threshold $\Sigma_c(n_3)=3$ is a supplied selection rule (**O24**);
